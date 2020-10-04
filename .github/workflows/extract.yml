@@ -14,11 +14,11 @@ jobs:
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./new/* ./
           pip3 install pygithub
-          python3 app.py ${{ secrets.GIT_TOKEN }}
+          python3 app.py ${{ secrets.TOKEN }}
       - name: Commit
         uses: test-room-7/action-update-file@v1
         with:
           file-path: |
             test.txt
           commit-msg: get_extract
-          github-token: ${{ secrets.GIT_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
