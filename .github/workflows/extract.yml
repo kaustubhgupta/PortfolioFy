@@ -1,5 +1,6 @@
 name: extract
 on:
+  workflow_dispatch:
 
 jobs:
   resources:
