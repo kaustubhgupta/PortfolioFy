@@ -1,0 +1,22 @@
+name: extract
+on:
+
+jobs:
+  resources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: get_extract
+        run: |
+          sudo apt install python3-setuptools
+          git clone https://github.com/kaustubhgupta/PortfolioFy
+          cp -r ./new/* ./
+          pip3 install pygithub
+          python3 app.py ${{ secrets.GIT_TOKEN }}
+      - name: Commit
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: |
+            test.txt
+          commit-msg: get_extract
+          github-token: ${{ secrets.GIT_TOKEN }}
