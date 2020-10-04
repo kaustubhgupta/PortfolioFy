@@ -7,12 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
       - name: get_extract
         run: |
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
-          cp -r ./new/* ./
+          cp -r ./PortfolioFy/* ./
           pip3 install pygithub
           python3 app.py ${{ secrets.TOKEN }}
       - name: Commit
