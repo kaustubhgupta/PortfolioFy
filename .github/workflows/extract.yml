@@ -13,7 +13,8 @@ jobs:
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
-          pip3 install - r requirements.txt
+          pip3 install pygithub
+          pip3 install pandas
           python3 prepare_data.py ${{ secrets.TOKEN }}
       - name: Upload result file to artifact
         uses: actions/upload-artifact@v2
@@ -36,7 +37,8 @@ jobs:
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
-          pip3 install - r requirements.txt
+          pip3 install pygithub
+          pip3 install pandas
           python3 use_data.py data.json
           
       - name: Commit file to repository
