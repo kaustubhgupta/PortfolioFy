@@ -14,7 +14,6 @@ jobs:
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
           pip3 install pygithub
-          pip3 install pandas
           python3 prepare_data.py ${{ secrets.TOKEN }}
       - name: Upload result file to artifact
         uses: actions/upload-artifact@v2
