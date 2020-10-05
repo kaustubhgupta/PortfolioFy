@@ -1,24 +1,58 @@
-name: extract
+name: Generate Data
 on:
   workflow_dispatch:
 
 jobs:
-  resources:
+  job_1:
+    name: Create Data.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: get_extract
+      - name: Initiate the Process
         run: |
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
-          pip3 install pygithub
-          pip3 install wheel
-          python3 app.py ${{ secrets.TOKEN }}
-      - name: Commit
+          pip3 install - r requirements.txt
+          python3 prepare_data.py ${{ secrets.TOKEN }}
+      - name: Upload result file to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: repo_data
+          path: data.json
+          
+  job_2:
+    name: Convert data to CSV
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download file
+        uses: actions/download-artifact@v2
+        with:
+          name: repo_data
+      - uses: actions/checkout@v1
+      - name: Initiate the Process
+        run: |
+          sudo apt install python3-setuptools
+          git clone https://github.com/kaustubhgupta/PortfolioFy
+          cp -r ./PortfolioFy/* ./
+          pip3 install - r requirements.txt
+          python3 use_data.py data.json
+          
+      - name: Commit file to repository
         uses: test-room-7/action-update-file@v1
         with:
           file-path: |
-            test.txt
-          commit-msg: get_extract
+            New_approach.csv
+          commit-msg: CSV file added
           github-token: ${{ secrets.TOKEN }}
+          
+  job_3:
+    name: Delete Artifact Generated
+    needs: job_2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: repo_data
