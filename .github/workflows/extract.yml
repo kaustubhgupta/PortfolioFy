@@ -37,9 +37,8 @@ jobs:
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
-          pip3 install pygithub
           pip3 install pandas
-          python3 use_data.py data.json
+          python3 use_data.py 
           
       - name: Commit file to repository
         uses: test-room-7/action-update-file@v1
