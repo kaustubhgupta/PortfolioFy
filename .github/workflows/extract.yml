@@ -27,18 +27,22 @@ jobs:
     needs: job_1
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
+      
       - name: Download file
         uses: actions/download-artifact@v2
+        id: download
         with:
           name: repo_data
-      - uses: actions/checkout@v1
+          path: path/to/artifacts
+  
       - name: Initiate the Process
         run: |
           sudo apt install python3-setuptools
           git clone https://github.com/kaustubhgupta/PortfolioFy
           cp -r ./PortfolioFy/* ./
           pip3 install pandas
-          python3 use_data.py 
+          python3 use_data.py ${{steps.download.outputs.download-path}}
           
       - name: Commit file to repository
         uses: test-room-7/action-update-file@v1
