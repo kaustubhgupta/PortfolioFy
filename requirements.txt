@@ -1,1 +1,2 @@
 pygithub==1.53
+pandas==1.1.2
