@@ -2,7 +2,6 @@ from github import Github
 import os
 import sys
 import json
-import pandas as pd
 
 
 git = Github(sys.argv[1])
