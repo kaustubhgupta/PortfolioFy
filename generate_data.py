@@ -3,7 +3,7 @@ import sys
 import json
 
 
-git = Github('2f722e9b831a30ef658aeb491ba443d6d13e22da')
+git = Github(sys.argv[1])
 print(f'Request left at start of the script: {git.rate_limiting}')
 
 user_object = git.get_user()
