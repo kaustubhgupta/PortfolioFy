@@ -55,6 +55,3 @@ with open('data_hackathon.json', 'w') as fp:
     json.dump(data_hackathon, fp)
 
 print(f'Request left at end of the script: {git.rate_limiting}')
-
-
-
