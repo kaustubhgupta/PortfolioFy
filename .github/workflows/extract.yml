@@ -61,3 +61,17 @@ jobs:
         - uses: geekyeggo/delete-artifact@v1
           with:
             name: repo_data
+          
+  job_4:
+    name: Add latest blogpost
+    needs: job_2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          feed_list: "https://medium.com/feed/@kaustubhgupta1828, https://www.kaustubhgupta.xyz/blog-feed.xml"
+          max_post_count: 7
+          readme_path: ./index.html
+          gh_token: ${{ secrets.TOKEN }}
+          template: "$newline - $randomEmoji(💯,🔥,💫,🚀,🌮) $title $url"
