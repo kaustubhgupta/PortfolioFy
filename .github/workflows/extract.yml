@@ -64,7 +64,7 @@ jobs:
           
   job_4:
     name: Add latest blogpost
-    needs: job_2
+    needs: job_3
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
