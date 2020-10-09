@@ -1,4 +1,4 @@
-name: Generate Data
+name: Generate Profile
 on:
   workflow_dispatch:
 
@@ -15,14 +15,49 @@ jobs:
           cp -r ./PortfolioFy/* ./
           pip3 install pygithub
           python3 generate_data.py ${{ secrets.TOKEN }}
-
-      - name: Commit files to repository
-        uses: test-room-7/action-update-file@v1
+          
+      - name: Upload result files to artifact
+        uses: actions/upload-artifact@v2
         with:
-          file-path: |
+          name: repo_data
+          path: |
             data_project.json
             data_hackathon.json
             data_user.json
-          commit-msg: data files added
+  job_2: 
+    name: Generate Index.html
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Download files
+        uses: actions/download-artifact@v2
+        id: download
+        with:
+          name: repo_data
+          path: path/to/artifacts
+        
+      - name: Initiate the Process
+        run: |
+          sudo apt install python3-setuptools
+          git clone https://github.com/kaustubhgupta/PortfolioFy
+          cp -r ./PortfolioFy/* ./
+          python3 generate_readme.py ${{steps.download.outputs.download-path}}
+          
+      - name: Commit file to repository
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: |
+            index.html
+          commit-msg: index file added
           github-token: ${{ secrets.TOKEN }}
-
+  
+  job_3:
+      name: Delete Artifact Generated
+      needs: job_2
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - uses: geekyeggo/delete-artifact@v1
+          with:
+            name: repo_data
