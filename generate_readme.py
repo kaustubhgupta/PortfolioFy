@@ -1,12 +1,15 @@
+import os
+import sys
 import json
 
-with open('data_user.json') as json_file:
+path = sys.argv[1]
+with open(os.path.join(path, 'data_user.json')) as json_file:
     user_data = json.load(json_file)
 
-with open('data_project.json') as json_file:
+with open(os.path.join(path, 'data_project.json')) as json_file:
     project_data = json.load(json_file)
 
-with open('data_hackathon.json') as json_file:
+with open(os.path.join(path, 'data_hackathon.json')) as json_file:
     hackathon_data = json.load(json_file)
 
 
