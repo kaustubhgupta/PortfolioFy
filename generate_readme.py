@@ -128,6 +128,9 @@ h3 {
 .h2-repo {
         font-size: 100%;
 }
+.button-text{
+        font-size: 180%;
+}
 }
 '''
 
@@ -160,7 +163,7 @@ if len(hackathon_data)!=0:
     for hackathon in hackathon_names:
         topics = ''
         for topic in hackathon_data[hackathon]['repo_topics']:
-            topics+= f'''<button class="button">{topic}</button>'''
+            topics+= f'''<button class="button"><text class="button-text">{topic}</text></button>'''
         hackathon_repos += f'''<div class="div-repos" align="left" id={count_hackathon}>
         <br>
         <h2 class="h2-repo"><a class="a-blue" href="https://github.com/kaustubhgupta/{hackathon}">{hackathon}</a></h2>
