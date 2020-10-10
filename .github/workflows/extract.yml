@@ -63,15 +63,15 @@ jobs:
             name: repo_data
           
   job_4:
-    name: Add latest blogpost
+    name: update-readme-with-blog
     needs: job_3
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: gautamkrishnar/blog-post-workflow@master
-        with:
-          feed_list: "https://medium.com/feed/@kaustubhgupta1828, https://www.kaustubhgupta.xyz/blog-feed.xml"
-          max_post_count: 7
-          readme_path: ./index.html
-          gh_token: ${{ secrets.TOKEN }}
-          template: "$newline - $randomEmoji(💯,🔥,💫,🚀,🌮) $title $url"
+        - uses: actions/checkout@v2
+        - uses: gautamkrishnar/blog-post-workflow@master
+          with:
+            feed_list: "https://medium.com/feed/@kaustubhgupta1828, https://www.kaustubhgupta.xyz/blog-feed.xml"
+            max_post_count: 7
+            readme_path: index.html
+            template: "$newline <h2 class='h2-blog'><a class='a-lightblue' href=$url>$title</a></h2>$newline <br>"
+            gh_token: ${{ secrets.TOKEN }}
