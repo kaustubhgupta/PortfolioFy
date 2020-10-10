@@ -149,7 +149,7 @@ h3 {
         width: 100%;
 }
 .h2-blog{
-        font-size: 180%;
+        font-size: 140%;
 }
 }
 '''
