@@ -1,6 +1,6 @@
 name: Latest blog post workflow
 on:
-  workflow_dispatch: 
+  push: 
     
 jobs:
   update-readme-with-blog:
