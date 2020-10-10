@@ -37,6 +37,12 @@ a {
         text-decoration: none;
 }
 
+.a-lightblue {
+        color:#208fd4;
+        background-color: transparent;
+        text-decoration: none;
+}
+
 .button {
         background-color: #f1f8ff;
         border: none;
@@ -77,6 +83,14 @@ h3 {
 
 .div-repos {
         width: 60%;
+}
+
+.div-blog{
+        width: 57%;
+}
+
+.h2-blog{
+        font-size: 120%;
 }
 
 .div-main {
@@ -129,6 +143,12 @@ h3 {
         font-size: 150%;
 }
 .button-text{
+        font-size: 180%;
+}
+.div-blog{
+        width: 100%;
+}
+.h2-blog{
         font-size: 180%;
 }
 }
@@ -204,8 +224,10 @@ template = f'''
 {hackathon_repos}
 <br>
 <h1 style="color:#d45131"> My Latest Blogs✍️</h1>
+<div align='left' class="div-blog">
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
+</div>
 <h3 style="color:#9a08c7">Contact on Email: {user_data['git_email']}</h3>
 </div>
 <div class="footer">
