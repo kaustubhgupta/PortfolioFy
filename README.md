@@ -12,11 +12,11 @@ As a developer we create hundreds of repositories and hardly 15-20 of them actua
 - You only need to have a GitHub personal access token which can be obtained by going to Settings > Developer Settings > Personal Access Tokens. Generate a new token and give atleast give this much permisions:
 <div align="center"> <img src="./images/config.PNG" align="center"> </div>
 
-*Note: If you give personal repositores access then they will be added to the sections but their links will not work*
+*Note: If you give personal repositories access then they will be added to the sections but their links will not work*
 
 ## Installation
 
-Create a new folder called  `.github/worflows/update.yml`, file name is your choice. Paste the following starter code:
+Create a new folder called  `.github/workflows/update.yml`, file name is your choice. Paste the following starter code:
 
 ```yml
 name: Latest portfolio
@@ -45,7 +45,7 @@ jobs:
 ```
 
 ## Usage
-This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects. 
+This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects!
 
 ## Add Blogs updatation
 There is an action called [Blog Post Workflow](https://github.com/marketplace/actions/blog-post-workflow) which updates latest blogpost on schedule. You can easily integrate this in your workflow via this method: (I highly recommend to use this!)
