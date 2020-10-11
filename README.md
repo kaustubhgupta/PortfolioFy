@@ -10,7 +10,7 @@ As a developer we create hundreds of repositories and hardly 15-20 of them actua
 ## Important note
 - The repositories need to have "project" topic to add them in project section and "hackathon" topic to add them in hackathon section. If you add both the topics to same repository then it will reflected in both sections!
 - You only need to have a GitHub personal access token which can be obtained by going to Settings > Developer Settings > Personal Access Tokens. Generate a new token and give atleast give this much permisions:
-![image](./images/config.PNG)
+<div align="center"> <img src="./images/config.PNG" align="center"> </div>
 
 *Note: If you give personal repositores access then they will be added to the sections but their links will not work*
 
