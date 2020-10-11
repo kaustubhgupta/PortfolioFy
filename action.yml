@@ -1,0 +1,15 @@
+name: Ultimate Portfolio Maker
+author: Kaustubh Gupta  
+description: Creates an webpage which can be deployed as Github page (Optimised for phone view) 
+inputs:
+  gh_token:
+    description: "Github Personal Access token"
+    required: True
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.gh_token }}
+branding:
+  icon: "award"
+  color: "green"
