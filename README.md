@@ -81,5 +81,8 @@ A special thanks to:
 
 *Create blogs, videos and tag me! I will definately have a look and featue them here!*
 
+## Featured Content
+- [Github Action That Automates Portfolio Generation](https://towardsdatascience.com/github-action-that-automates-portfolio-generation-bc15835862dc) - Medium Blog
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
