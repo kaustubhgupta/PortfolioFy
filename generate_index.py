@@ -200,7 +200,7 @@ if len(project_data)!=0:
             topics+= f'''<button class="button"><text class="button-text">{topic}</text></button>'''
         project_repos += f'''<div class="div-repos" align="left" id={count_project}>
         <br>
-        <h2 class="h2-repo"><a class="a-blue" href="https://github.com/kaustubhgupta/{project}">{project}</a></h2>
+        <h2 class="h2-repo"><a class="a-blue" href="https://github.com/{git_username}/{project}">{project}</a></h2>
         {topics}
         <br>
         <text class="text-repo">{project_data[project]['repo_description']}<text><br>
@@ -222,7 +222,7 @@ if len(hackathon_data)!=0:
             topics+= f'''<button class="button"><text class="button-text">{topic}</text></button>'''
         hackathon_repos += f'''<div class="div-repos" align="left" id={count_hackathon}>
         <br>
-        <h2 class="h2-repo"><a class="a-blue" href="https://github.com/kaustubhgupta/{hackathon}">{hackathon}</a></h2>
+        <h2 class="h2-repo"><a class="a-blue" href="https://github.com/{git_username}/{hackathon}">{hackathon}</a></h2>
         {topics}
         <br>
         <text class="text-repo">{hackathon_data[hackathon]['repo_description']}<text><br>
