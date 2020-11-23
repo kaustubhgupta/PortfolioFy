@@ -83,6 +83,7 @@ A special thanks to:
 
 ## Featured Content
 - [Github Action That Automates Portfolio Generation](https://towardsdatascience.com/github-action-that-automates-portfolio-generation-bc15835862dc) - Medium Blog
+- [Youtube Video Demo](https://www.youtube.com/watch?v=uIQhIdErYSk) - By [Mihir Rabade](https://github.com/MRDGH2821)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
