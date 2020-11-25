@@ -11,7 +11,7 @@
 </p>
 <p align="center">
 <img src="./images/preview.PNG" alt="Screeenshot taken on 11th October, 2020" align="center">
-</div>
+</p>
 
 As a developer we create hundreds of repositories and hardly 15-20 of them actually make it to final project we deploy and showcase on social media/LinkedIn. This GitHub action allows you to generate your perfect self updating portfolio with Projects, Hackathons and latest Blogs (optional).
 
