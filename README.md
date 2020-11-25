@@ -72,7 +72,7 @@ jobs:
             feed_list: <Your feedlist>
             max_post_count: 7
             readme_path: index.html
-            template: "$newline <h2 class='h2-blog'><a class='a-lightblue' href=$url>$title</a></h2>$newline <br>"  # Do not change the template as it will not render good results!
+            template: "<h2 class='h2-blog'><a class='a-lightblue' href=$url>$title</a></h2>"  # Do not change the template as it will not render good results!
             gh_token: ${{ secrets.TOKEN }}
 
 ```
