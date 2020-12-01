@@ -76,12 +76,48 @@ jobs:
             gh_token: ${{ secrets.TOKEN }}
 
 ```
+Do enable the blogs parameter in the main workflow too!
+```yml
+.
+.
+.
+- uses: actions/checkout@v2
+        - uses: kaustubhgupta/PortfolioFy@v1.5 # If any new version is released, kindly specify that
+          with:
+            gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
+            blogs: True
+```
+## Add Hackathon
+Starting version 1.5, hackathon is optional to be included in the portfolio. By default, it is False but you can enable it in the workflow as:
+```yml
+.
+.
+.
+- uses: actions/checkout@v2
+        - uses: kaustubhgupta/PortfolioFy@v1.5 # If any new version is released, kindly specify that
+          with:
+            gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
+            hackathons: True
+```
+
+## GitHub Stats Choice
+From version 1.5, you can choose between two types of stats generation. The basic one looks like this, choice 1: (Made by Anurag Hazra)
+<div align="center"> <img src="./images/stats1.PNG" align="center"> </div>
+<br>
+Stats Choice 2 gives detailed report of the profile: (Made by Simon Lecoq
+)
+<div align="center"> <img src="./images/stats2.PNG" align="center"> </div>
+<br>
 
 *Do star the repository! It gives me motivation to develop more projects like this!*
 
+## Multiple Themes
+This feature is currently in development but by default the theme is selected as level 1. In upcoming version, more themes will be added.
+
 ## Special Mentions
 A special thanks to:
-- [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats Image.
+- [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats.
+- [Simon Lecoq](https://github.com/lowlighter/metrics) detailed stats generation 
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) GitHub action which makes it possible to update blogpost.
 - [Rajveer Narag](https://github.com/RajveerN01) for helping out with front-end development and mobile view optimization.
 - [Test Room 7](https://github.com/marketplace/actions/update-files-on-github) GitHub action which enables commit of files to repository
