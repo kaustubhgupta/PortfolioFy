@@ -1,5 +1,6 @@
 from github import Github
 from themes.level_1.level1 import genHTMLLevel1
+from themes.level_1.formatLevel1 import cssLevel1
 from functions.RepoToHTML import repotohtml
 from distutils.util import strtobool
 import sys
@@ -77,10 +78,9 @@ else:
 end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
-path = f'PortfolioFy/themes/level_{theme_selected}/min-format.css'
-print(path)
-with open(path, 'r') as f:
-    css = f.read()
+
+if theme_selected == '1':
+    css = cssLevel1
 
 project_repos = repotohtml(project_data, git_username)
 if include_hackathon:

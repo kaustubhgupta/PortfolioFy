@@ -1,3 +1,4 @@
+cssLevel1 ='''
 html {
     font-family: "Lucida Sans", sans-serif;
   }
@@ -136,3 +137,4 @@ html {
           font-size: 140%;
   }
   }
+'''
