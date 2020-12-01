@@ -77,7 +77,7 @@ else:
 end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
-currentPath = os.path.abspath(os.getcwd())
+currentPath = os.getcwd()
 with open(os.path.join(currentPath, f'/themes/level_{theme_selected}/min-format.css'), 'r') as f:
     css = f.read()
 

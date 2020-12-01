@@ -3,3 +3,6 @@
 
 # python cache
 __pycache__/
+
+# testing file
+test.py
