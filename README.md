@@ -52,8 +52,16 @@ jobs:
             github-token: ${{ secrets.TOKEN }}
 ```
 
-## Usage
+## Usage and Options availabel
 This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects!
+
+| Option | Default Value | Description | Required |
+|--------|--------|--------|--------|
+|`gh_token`|NA|Github Personal Access token|Yes|
+|`theme`|`1`|Type of webpage you want to render|No|
+|`blogs`|`False`|Whether you want to include blogs in your Portfolio|No|
+|`hackathons`|`False`|Apart from Personal projects you can include hackathon projects| No|
+|`stats_choice`|`1`| Which type of github stats you want to display in your profile|No|
 
 ## Add Blog Updates
 There is an action called [Blog Post Workflow](https://github.com/marketplace/actions/blog-post-workflow) which updates latest blogpost on schedule. You can easily integrate this in your workflow via this method: (I highly recommend to use this!)
