@@ -77,7 +77,7 @@ else:
 end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
-with open(f'themes/level_{theme_selected}/min-format.css', 'r') as f:
+with open(f'./themes/level_{theme_selected}/min-format.css', 'r') as f:
     css = f.read()
 
 project_repos = repotohtml(project_data, git_username)
