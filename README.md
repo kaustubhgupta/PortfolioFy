@@ -52,7 +52,7 @@ jobs:
             github-token: ${{ secrets.TOKEN }}
 ```
 
-## Usage and Options availabel
+## Usage and Options available
 This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects!
 
 | Option | Default Value | Description | Required |
