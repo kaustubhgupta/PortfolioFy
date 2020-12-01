@@ -4,7 +4,7 @@ from functions.RepoToHTML import repotohtml
 from distutils.util import strtobool
 import sys
 import json
-
+import os
 
 git = Github(sys.argv[1])
 theme_selected = sys.argv[2]
@@ -77,7 +77,8 @@ else:
 end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
-with open(f'./themes/level_{theme_selected}/min-format.css', 'r') as f:
+currentPath = os.path.abspath(os.getcwd())
+with open(os.path.join(currentPath, f'/themes/level_{theme_selected}/min-format.css'), 'r') as f:
     css = f.read()
 
 project_repos = repotohtml(project_data, git_username)
