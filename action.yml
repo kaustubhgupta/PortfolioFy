@@ -5,11 +5,32 @@ inputs:
   gh_token:
     description: "Github Personal Access token"
     required: True
+  theme:
+    description: "Type of webpage you want to render"
+    required: False
+    default: 1
+  blogs:
+    description: "Whether you want to include blogs in your Portfolio"
+    required: False
+    default: False
+  hackathons:
+    description: "Apart from Personal projects you can include hackathon projects."
+    required: False
+    default: False
+  stats_choice: 
+    description: "Which type of github stats you want to display in your profile"
+    required: False
+    default: 1
+
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.gh_token }}
+    - ${{ inputs.theme }}
+    - ${{ inputs.blogs }}
+    - ${{ inputs.hackathons }}
+    - ${{ inputs.stats_choice }}
 branding:
   icon: "award"
   color: "green"

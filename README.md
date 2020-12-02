@@ -10,7 +10,7 @@
 
 </p>
 <p align="center">
-<img src="./images/preview.PNG" alt="Screeenshot taken on 11th October, 2020" align="center">
+<img src="./images/combinedPreview.png" align="center">
 </p>
 
 As a developer we create hundreds of repositories and hardly 15-20 of them actually make it to final project we deploy and showcase on social media/LinkedIn. This GitHub action allows you to generate your perfect self updating portfolio with Projects, Hackathons and latest Blogs (optional).
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - uses: kaustubhgupta/PortfolioFy@v1.0
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
           with:
             gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
 
@@ -55,8 +55,16 @@ jobs:
             github-token: ${{ secrets.TOKEN }}
 ```
 
-## Usage
+## Usage and Options available
 This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects!
+
+| Option | Default Value | Description | Required |
+|--------|--------|--------|--------|
+|`gh_token`|NA|Github Personal Access token|Yes|
+|`theme`|`1`|Type of webpage you want to render|No|
+|`blogs`|`False`|Whether you want to include blogs in your Portfolio|No|
+|`hackathons`|`False`|Apart from Personal projects you can include hackathon projects| No|
+|`stats_choice`|`1`| Which type of github stats you want to display in your profile|No|
 
 ## Add Blog Updates
 There is an action called [Blog Post Workflow](https://github.com/marketplace/actions/blog-post-workflow) which updates latest blogpost on schedule. You can easily integrate this in your workflow via this method: (I highly recommend to use this!)
@@ -75,19 +83,68 @@ jobs:
             feed_list: <Your feedlist>
             max_post_count: 7
             readme_path: index.html
-            template: "$newline <h2 class='h2-blog'><a class='a-lightblue' href=$url>$title</a></h2>$newline <br>"  # Do not change the template as it will not render good results!
+            template: "<h2 class='h2-blog'><a class='a-lightblue' href=$url>$title</a></h2>"  # Do not change the template as it will not render good results!
             gh_token: ${{ secrets.TOKEN }}
 
 ```
+Do enable the blogs parameter in the main workflow too!
+```yml
+.
+.
+.
+- uses: actions/checkout@v2
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
+          with:
+            gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
+            blogs: True
+```
+## Add Hackathon
+Starting version v2.0.1, hackathon is optional to be included in the portfolio. By default, it is False but you can enable it in the workflow as:
+```yml
+.
+.
+.
+- uses: actions/checkout@v2
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
+          with:
+            gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
+            hackathons: True
+```
+
+## GitHub Stats Choice
+From version v2.0.1, you can choose between two types of stats generation. The basic one looks like this, choice 1: (Made by Anurag Hazra)
+<div align="center"> <img src="./images/stats1.PNG" align="center"> </div>
+<br>
+Stats Choice 2 gives detailed report of the profile: (Made by Simon Lecoq
+)
+<div align="center"> <img src="./images/stats2.PNG" align="center"> </div>
+<br>
 
 *Do star the repository! It gives me motivation to develop more projects like this!*
 
+## Multiple Themes
+You can select any of the themes depending upon your usage.
+
+### Theme 1
+This is a basic level theme.
+<p align="center">
+<img src="./images/gifpreviewL1.gif" align="center">
+</p>
+
+### Theme 2
+This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.com/theme/resume). It is fully interactive, good looking and more responsive than first in mobile devices.
+<p align="center">
+<img src="./images/gifpreviewL2.gif" align="center">
+</p>
+
 ## Special Mentions
 A special thanks to:
-- [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats Image.
+- [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats.
+- [Simon Lecoq](https://github.com/lowlighter/metrics) detailed stats generation
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) GitHub action which makes it possible to update blogpost.
 - [Rajveer Narag](https://github.com/RajveerN01) for helping out with front-end development and mobile view optimization.
 - [Test Room 7](https://github.com/marketplace/actions/update-files-on-github) GitHub action which enables commit of files to repository
+- [Start Bootstrap](https://startbootstrap.com/theme/resume) for amazing themes!
 - [GitHub actions](https://docs.github.com/en/free-pro-team@latest/actions) docs, it's the best guide!
 
 *Create blogs, videos and tag me! I will definitely have a look and feature them here!*
