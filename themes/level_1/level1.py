@@ -1,15 +1,15 @@
-from functions.addBlogs import addBlogsEntry
-from functions.addHackathon import addHackathonEntry
+from functions.addBlogs import addBlogsEntryL1
+from functions.addHackathon import addHackathonEntryL1
 
 
-def genHTMLLevel1(user_data, css, project_repos, hackathon_repos, blogs, stats_choice):
+def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice):
 
     template = f'''
     <html>
     <title>{user_data['name']} Portfolio</title>
     <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>{css}</style>
+    <link href="https://kaustubhgupta.github.io/themescss/level1.css" rel="stylesheet" />
     </head>
     <body>
     <div class="div-main" align="center">
@@ -44,10 +44,10 @@ def genHTMLLevel1(user_data, css, project_repos, hackathon_repos, blogs, stats_c
         template = template.replace('<!-- GITHUBSTATS-ENTRY -->', statsImg)
 
     if blogs:
-        template = addBlogsEntry(template)
+        template = addBlogsEntryL1(template)
 
     if hackathon_repos is not None:
-        retunFile = addHackathonEntry(template)
+        retunFile = addHackathonEntryL1(hackathon_repos, user_data, template)
         return retunFile
     else:
         return template
