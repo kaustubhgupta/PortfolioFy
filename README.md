@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - uses: kaustubhgupta/PortfolioFy@v1.5 # If any new version is released, kindly specify that
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
           with:
             gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
        
@@ -90,26 +90,26 @@ Do enable the blogs parameter in the main workflow too!
 .
 .
 - uses: actions/checkout@v2
-        - uses: kaustubhgupta/PortfolioFy@v1.5 # If any new version is released, kindly specify that
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
           with:
             gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
             blogs: True
 ```
 ## Add Hackathon
-Starting version 1.5, hackathon is optional to be included in the portfolio. By default, it is False but you can enable it in the workflow as:
+Starting version v2.0.1, hackathon is optional to be included in the portfolio. By default, it is False but you can enable it in the workflow as:
 ```yml
 .
 .
 .
 - uses: actions/checkout@v2
-        - uses: kaustubhgupta/PortfolioFy@v1.5 # If any new version is released, kindly specify that
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can dierctly specify @main to avoid version confusion
           with:
             gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
             hackathons: True
 ```
 
 ## GitHub Stats Choice
-From version 1.5, you can choose between two types of stats generation. The basic one looks like this, choice 1: (Made by Anurag Hazra)
+From version v2.0.1, you can choose between two types of stats generation. The basic one looks like this, choice 1: (Made by Anurag Hazra)
 <div align="center"> <img src="./images/stats1.PNG" align="center"> </div>
 <br>
 Stats Choice 2 gives detailed report of the profile: (Made by Simon Lecoq
