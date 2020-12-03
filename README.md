@@ -35,7 +35,7 @@ name: Latest portfolio
 on:
   schedule:
     # Runs at the end of every day. You can customize according to your need. You can also trigger this action for other events. Check GitHub actions page for that.
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
