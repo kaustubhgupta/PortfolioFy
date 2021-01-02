@@ -164,7 +164,7 @@ This project is now assoicated with [Script Winter of Code](https://swoc.tech/)
 <img src="./images/logo.PNG" align="center">
 </p>
 
-## Special Mentionss
+## Special Mentions
 A special thanks to:
 
 - [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats.
