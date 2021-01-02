@@ -154,6 +154,9 @@ This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.c
 <img src="./images/gifpreviewL2.gif" align="center">
 </p>
 
+## Documentation
+A detailed documentation for this project is available on the [wiki](https://github.com/kaustubhgupta/PortfolioFy/wiki) tab.
+
 ## Special Mentions
 
 A special thanks to:
@@ -165,13 +168,6 @@ A special thanks to:
 - [Test Room 7](https://github.com/marketplace/actions/update-files-on-github) GitHub action which enables commit of files to repository
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) for amazing themes!
 - [GitHub actions](https://docs.github.com/en/free-pro-team@latest/actions) docs, it's the best guide!
-
-_Create blogs, videos and tag me! I will definitely have a look and feature them here!_
-
-## Featured Content
-
-- [GitHub Action That Automates Portfolio Generation](https://towardsdatascience.com/github-action-that-automates-portfolio-generation-bc15835862dc) - Medium Blog
-- [YouTube Video Guide & Demo](https://youtu.be/uIQhIdErYSk) - By [Mihir Rabade](https://github.com/MRDGH2821)
 
 ## License
 
