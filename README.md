@@ -1,8 +1,4 @@
-<div align="center">
-<h1 align="center">Ultimate Portfolio Maker</h1>
-<h3 align="center">Dynamically Self Updating Portfolio</h3>
-<h4 align="center"> Developed by: Kaustubh Gupta </h4>
-  </div>
+![PortfolioFy](https://socialify.git.ci/kaustubhgupta/PortfolioFy/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Light) 
 <p align="center">
 <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white" align="center">
 <img src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white" align="center">
