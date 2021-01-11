@@ -6,3 +6,5 @@ __pycache__/
 
 # testing file
 test.py
+
+token.txt

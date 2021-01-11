@@ -16,6 +16,7 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <img class="img-rounded" alt="Image" height="350px" src="{user_data['git_photo_url']}" />
     <h1 style='color:#f24b4b'> Hi, I am <a href="https://github.com/{user_data['username']}">{user_data['name']}</a>👨‍🎓 </h1>
     <h2 style='color:#21439e'>{user_data['git_bio']}</h2>
+    <a href="https://drive.google.com/file/d/13aERPhQiXCqY04NusEhWW2sTSy-A3g-c/view?usp=sharing" target="_blank"><h2 style='color:#d45131'>👉View Resume</h2></a>
     <!-- GITHUBSTATS-ENTRY -->
     <h3 style='color:#751878'>Followers: <b>{user_data['git_followers']}</b>, Following: <b>{user_data['git_following']}</b></h3>
     <br>
