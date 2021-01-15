@@ -1,0 +1,3 @@
+### Dockerisation
+
+Dockers are the perfect way to isolate the program development and ensures that if it runs on local development will run the deployment stage also. This script is fairly small and therefore the docker file associated with this project is simple. It copies the repo data into a new folder, installs the dependencies, and runs the entry point script with all the parameters passed in the GitHub action. 

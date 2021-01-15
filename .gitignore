@@ -6,3 +6,6 @@ __pycache__/
 
 # testing file
 test.py
+
+#node modules
+node_modules
