@@ -151,7 +151,7 @@ This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.c
 </p>
 
 ## Documentation
-A detailed documentation for this project is available on the [wiki](https://github.com/kaustubhgupta/PortfolioFy/wiki) tab.
+A detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy/)
 
 ## Associations
 This project is now assoicated with [Script Winter of Code](https://swoc.tech/)
