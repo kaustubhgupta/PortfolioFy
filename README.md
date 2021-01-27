@@ -153,13 +153,6 @@ This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.c
 ## Documentation
 A detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy/)
 
-## Associations
-This project is now assoicated with [Script Winter of Code](https://swoc.tech/)
-
-<p align="center">
-<img src="./images/logo.PNG" align="center">
-</p>
-
 ## Special Mentions
 A special thanks to:
 
