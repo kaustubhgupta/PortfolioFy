@@ -17,3 +17,7 @@ This file contains all levels of blog entry functions. As this is an optional pa
 ### functions/addHackathon.py
 
 It has the same functionality as addBlogs.py. The only difference is of replacement comment: `<!-- HACKATHON-ENTRY -->`. You are free to customize the CSS and HTML tags here.
+
+### functions/addSocialLinks.py
+
+This function takes in the social_links parameter and converts it into the html code. The HTML code contains the link to that particular social platform with the associated logo. The function checks for the platform and assignes the key as that platform and value as the link. The check is done via the regular expressions.

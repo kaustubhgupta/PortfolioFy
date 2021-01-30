@@ -65,7 +65,7 @@ This action generates a index.html file which is website ready. Simply enable th
 | `blogs`        | `False`       | Whether you want to include blogs in your Portfolio (True/False)             | No       |  True   |
 | `hackathons`   | `False`       | Apart from Personal projects you can include hackathon projects (True/False) | No       |  True
 | `stats_choice` | `1`           | Which type of GitHub stats you want to display in your profile: 1 or 2       | No       |  2
-| `social_links` | `False`       | You can add social links for Linkedin, Twitter, Dev.to, Medium. Pass it as string of all the links | No       | 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'|
+| `social_links` | `False`       | You can add social links for Linkedin, Twitter, Dev.to, Medium, and Stackoverflow. Pass it as string of all the links | No       | 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'|
 
 ## Add Blog Updates
 
@@ -152,7 +152,7 @@ This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.c
 </p>
 
 ## Add Social Links
-You can add your social media links to connect better with your audience. Currently, you can add links of Linkedin, Twitter, Dev.to, and Medium. There is no restriction to add all of them. You can skip this parameter, add partial links or all the links depending upon the usage!
+You can add your social media links to connect better with your audience. Currently, you can add links of Linkedin, Twitter, Dev.to, Medium, and Stackoverflow. There is no restriction to add all of them. You can skip this parameter, add partial links or all the links depending upon the usage!
 
 ```yml
 .
