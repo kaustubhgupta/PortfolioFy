@@ -25,6 +25,10 @@ inputs:
     description: "You can include all social links including Linkedin, Twitter, Facebook, Medium, Devto here as a string."
     required: False
     default: False
+  resume_link:
+    description: "Link for resume pdf uploaded online"
+    required: False
+    default: False
 runs:
   using: docker
   image: Dockerfile
@@ -35,6 +39,7 @@ runs:
     - ${{ inputs.hackathons }}
     - ${{ inputs.stats_choice }}
     - ${{ inputs.social_links }}
+    - ${{ inputs.resume_link }}
 branding:
   icon: "award"
   color: "green"
