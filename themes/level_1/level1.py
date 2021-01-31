@@ -2,7 +2,7 @@ from functions.addBlogs import addBlogsEntryL1
 from functions.addHackathon import addHackathonEntryL1
 
 
-def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice):
+def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links):
 
     template = f'''
     <html>
@@ -19,6 +19,7 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <a href="https://drive.google.com/file/d/13aERPhQiXCqY04NusEhWW2sTSy-A3g-c/view?usp=sharing" target="_blank"><h2 style='color:#d45131'>👉View Resume</h2></a>
     <!-- GITHUBSTATS-ENTRY -->
     <h3 style='color:#751878'>Followers: <b>{user_data['git_followers']}</b>, Following: <b>{user_data['git_following']}</b></h3>
+    {social_links}
     <br>
     <h1 style="color:#d45131"> My Projects👇</h1>
     <text class="text-info">(These repositories are tagged as project. *Updated: {user_data['latest_updated']})</text>

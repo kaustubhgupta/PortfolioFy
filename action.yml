@@ -1,6 +1,6 @@
 name: Ultimate Portfolio Maker
 author: Kaustubh Gupta  
-description: Creates an webpage which can be deployed as Github page (Optimised for phone view) 
+description: Creates an webpage which can be deployed as Github page
 inputs:
   gh_token:
     description: "Github Personal Access token"
@@ -21,7 +21,10 @@ inputs:
     description: "Which type of github stats you want to display in your profile"
     required: False
     default: 1
-
+  social_links:
+    description: "You can include all social links including Linkedin, Twitter, Facebook, Medium, Devto here as a string."
+    required: False
+    default: False
 runs:
   using: docker
   image: Dockerfile
@@ -31,6 +34,7 @@ runs:
     - ${{ inputs.blogs }}
     - ${{ inputs.hackathons }}
     - ${{ inputs.stats_choice }}
+    - ${{ inputs.social_links }}
 branding:
   icon: "award"
   color: "green"

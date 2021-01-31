@@ -1,0 +1,97 @@
+:root {
+      --theme-color: #66a4c4;
+
+    }
+
+		body {
+			background: #8ccfe936 !important;
+		}
+
+    .results-panel {
+			background: #c5e0ee1c;
+		}
+		.sidebar.sidebar {
+      background: #c5e0ee1c;
+    }
+
+    .sidebar ul li.active>a {
+      color: #10678f;
+      font-weight: bold;
+    }
+
+		.sidebar-toggle.sidebar-toggle {
+			background: #c5e0ee1c;
+		}
+
+    .search.search {
+      border: none;
+      padding: 0px;
+      border-bottom: 1px solid black;
+      box-shadow: none;
+      /* padding-bottom: 10px; */
+    }
+
+    .search.search input {
+      background: transparent;
+      line-height: 40px;
+      padding-top: 6px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .search.search .results-panel {
+      background: #d4d8da;
+    }
+
+    .search.search .matching-post {
+      padding: 6px;
+      /* margin: 6px; */
+      background: #b2bebe32;
+      border: 1px solid #3031311a;
+    }
+
+    .sequence {
+      margin: 30px auto;
+    }
+
+    .app-name-link {
+      display: flex;
+      align-items: center;
+      margin: 6px 15px;
+    }
+
+    app-name-link::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+
+    .markdown-section.markdown-section p {
+      /* background: var(--theme-color, #1e2020); */
+      color: #192424;
+    }
+
+    .markdown-section.markdown-section p.warn {
+      background: var(--theme-color, #1e2020);
+      color: #070808;
+    }
+
+    .markdown-section.markdown-section a {
+      color: #0e0b0b;
+      text-decoration: none;
+    }
+
+    .app-nav p {
+      display: flex;
+      align-items: center;
+    }
+
+    .app-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+    }

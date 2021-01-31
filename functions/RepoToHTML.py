@@ -9,7 +9,7 @@ def repotohtml(data, git_username):
             topics = ''
             for topic in data[project]['repo_topics']:
                 topics += f'''<button class="button"><text class="button-text">{topic}</text></button>'''
-            project_repos += f'''<div class="div-repos" align="left" id={count_project}>
+            project_repos += f'''<div class="div-repos" align="left" id="{count_project}">
             <br>
             <h2 class="h2-repo"><a class="a-blue" href="https://github.com/{git_username}/{project}">{project}</a></h2>
             {topics}
