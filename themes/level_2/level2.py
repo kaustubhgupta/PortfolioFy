@@ -1,5 +1,6 @@
 from functions.addBlogs import addBlogsEntryL2
 from functions.addHackathon import addHackathonEntryL2
+from functions.addResume import addResumeEntryL2
 
 
 def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link):
@@ -92,7 +93,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <div class="social-icons">
     {social_links}
     </div>
-    <a href="{resume_link}" target="_blank"><h4 style='color:#d45131; margin:20px 0;'>View Resume</h4></a>
+    <!-- RESUME-ENTRY -->
     </div>
     </section>
     <hr class="m-0" />
@@ -146,3 +147,6 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
         return retunFile
     else:
         return template
+
+    if resume_link:
+        template = addResumeEntryL2(template, resume_link)
