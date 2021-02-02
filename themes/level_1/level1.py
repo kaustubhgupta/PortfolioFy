@@ -1,6 +1,7 @@
 from functions.addBlogs import addBlogsEntryL1
 from functions.addHackathon import addHackathonEntryL1
 from functions.addResume import addResumeEntryL1
+from distutils.util import strtobool
 
 
 def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link):
@@ -49,11 +50,18 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if blogs:
         template = addBlogsEntryL1(template)
 
+    try: 
+        result = strtobool(resume_link) 
+    except:
+        result = resume_link
+
+    if type(result) is not int:
+        template = addResumeEntryL1(template, resume_link)
+
     if hackathon_repos is not None:
         retunFile = addHackathonEntryL1(hackathon_repos, user_data, template)
         return retunFile
     else:
         return template
 
-    if resume_link:
-        template = addResumeEntryL1(template, resume_link)
+    
