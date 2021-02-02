@@ -1,26 +1,6 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: bug
-assignees: ''
-
----
-
----
-name: Bug report
-about: Create a report to help us improve.
-title: Bug report
-labels: bug
-assignees: ''
-
----
-
 **Describe the bug**
-A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+** Steps to reproduce the bug:**
 1. 
 2. 
 3. 
@@ -30,7 +10,7 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Actual behavior**
-A clear and concise description of how the code performed w.r.t expectations.
+A clear and concise description of how the code performed with respect to expectations.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
