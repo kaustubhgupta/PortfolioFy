@@ -1,8 +1,10 @@
 from functions.addBlogs import addBlogsEntryL2
 from functions.addHackathon import addHackathonEntryL2
+from functions.addResume import addResumeEntryL2
+from distutils.util import strtobool
 
 
-def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links):
+def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link):
 
     req_css = '''
     .h2-repo {
@@ -92,6 +94,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <div class="social-icons">
     {social_links}
     </div>
+    <!-- RESUME-ENTRY -->
     </div>
     </section>
     <hr class="m-0" />
@@ -140,8 +143,18 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if blogs:
         template = addBlogsEntryL2(template)
 
+    try: 
+        result = strtobool(resume_link) 
+    except:
+        result = resume_link
+
+    if type(result) is not int:
+        template = addResumeEntryL2(template, resume_link)
+
     if hackathon_repos is not None:
         retunFile = addHackathonEntryL2(hackathon_repos, user_data, template)
         return retunFile
     else:
         return template
+
+    

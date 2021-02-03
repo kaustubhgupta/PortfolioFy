@@ -13,6 +13,7 @@ blogs = strtobool(sys.argv[3])
 include_hackathon = strtobool(sys.argv[4])
 stats_choice = sys.argv[5]
 social_links = sys.argv[6]
+resume_link = sys.argv[7]
 
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
@@ -91,11 +92,11 @@ social_data = strtoLinksHTML(social_links, user_data['username'])
 
 if theme_selected == '1':
     indexFile = genHTMLLevel1(
-        user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data)
+        user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data, resume_link)
 
 elif theme_selected == '2':
     indexFile = genHTMLLevel2(user_data, project_repos,
-                              hackathon_repos, blogs, stats_choice, social_data)
+                              hackathon_repos, blogs, stats_choice, social_data, resume_link)
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(indexFile)

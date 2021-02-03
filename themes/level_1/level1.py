@@ -1,8 +1,10 @@
 from functions.addBlogs import addBlogsEntryL1
 from functions.addHackathon import addHackathonEntryL1
+from functions.addResume import addResumeEntryL1
+from distutils.util import strtobool
 
 
-def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links):
+def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link):
 
     template = f'''
     <html>
@@ -16,7 +18,8 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <img class="img-rounded" alt="Image" height="350px" src="{user_data['git_photo_url']}" />
     <h1 style='color:#f24b4b'> Hi, I am <a href="https://github.com/{user_data['username']}">{user_data['name']}</a>👨‍🎓 </h1>
     <h2 style='color:#21439e'>{user_data['git_bio']}</h2>
-    <!-- GITHUBSTATS-ENTRY -->  
+    <!-- RESUME-ENTRY -->
+    <!-- GITHUBSTATS-ENTRY -->
     <h3 style='color:#751878'>Followers: <b>{user_data['git_followers']}</b>, Following: <b>{user_data['git_following']}</b></h3>
     {social_links}
     <br>
@@ -47,8 +50,18 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if blogs:
         template = addBlogsEntryL1(template)
 
+    try: 
+        result = strtobool(resume_link) 
+    except:
+        result = resume_link
+
+    if type(result) is not int:
+        template = addResumeEntryL1(template, resume_link)
+
     if hackathon_repos is not None:
         retunFile = addHackathonEntryL1(hackathon_repos, user_data, template)
         return retunFile
     else:
         return template
+
+    
