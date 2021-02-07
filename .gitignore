@@ -9,5 +9,8 @@ test.py
 test.html
 index.html
 
-#node modules
+# node modules
 node_modules
+
+# environment 
+env
