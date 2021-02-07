@@ -29,6 +29,10 @@ inputs:
     description: "Link for resume pdf uploaded online"
     required: False
     default: False
+  allow_footer:
+    description: "You can control whether you want to display the creeator footer at the end of the webpage"
+    required: False
+    default: True
 runs:
   using: docker
   image: Dockerfile
@@ -40,6 +44,7 @@ runs:
     - ${{ inputs.stats_choice }}
     - ${{ inputs.social_links }}
     - ${{ inputs.resume_link }}
+    - ${{ inputs.allow_footer }}
 branding:
   icon: "award"
   color: "green"
