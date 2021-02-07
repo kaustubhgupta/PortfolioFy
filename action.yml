@@ -30,7 +30,7 @@ inputs:
     required: False
     default: False
   allow_footer:
-    description: "You can control whether you want to display the creeator footer at the end of the webpage"
+    description: "You can control whether you want to display the creator credits footer at the end of the webpage"
     required: False
     default: True
 runs:
