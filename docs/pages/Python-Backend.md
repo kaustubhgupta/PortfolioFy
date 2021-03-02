@@ -1,6 +1,6 @@
 # generate_index.py
 
-This file is the entry point of this action. It takes in the inputs for [parameters](/pages/Git-Actions-Parameters) and depending upon that passes the data to the HTML renders.
+This file is the entry point of this action. It takes in the inputs for [parameters](./pages/Git-Actions-Parameters) and depending upon that passes the data to the HTML renders.
 
 # themes/level_{num}
 
