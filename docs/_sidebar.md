@@ -1,10 +1,10 @@
 - Getting Started
 
-	- [How it Works?](/pages/How-it-Works)
-	- [Setting Up locally](/pages/Setting-Up-Locally)
-	- [Git Actions Parameters](/pages/Git-Actions-Parameters)
-	- [Python Backend](/pages/Python-Backend)
-	- [Frontend](/pages/Frontend)
+	- [How it Works?](./pages/How-it-Works)
+	- [Setting Up locally](./pages/Setting-Up-Locally)
+	- [Git Actions Parameters](./pages/Git-Actions-Parameters)
+	- [Python Backend](./pages/Python-Backend)
+	- [Frontend](./pages/Frontend)
 
 - For Contributors
 

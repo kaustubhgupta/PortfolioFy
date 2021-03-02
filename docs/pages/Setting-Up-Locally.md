@@ -9,7 +9,7 @@
   ```
 # Local Run
 
-- As this is a GitHub Action, it will assume some [parameters](/pages/Git-Actions-Parameters) to be passed before running the script.
+- As this is a GitHub Action, it will assume some [parameters](./pages/Git-Actions-Parameters) to be passed before running the script.
 - To successfully run this:
   ```python
   python generate_index.py <GITHUB_TOKEN> <THEME_LEVEL> <BLOGS_COND> <HACKATHHONS_COND> <STATS_CHOICE>
