@@ -1,15 +1,13 @@
 - Getting Started
 
-	- [How it Works?](/wiki/How-it-Works)
-	- [Setting Up locally](/wiki/Setting-Up-Locally)
-	- [Git Actions Parameters](/wiki/Git-Actions-Parameters)
-	- [Python Backend](/wiki/Python-Backend)
-	- [Frontend](/wiki/Frontend)
-	- [Dockerisation](/wiki/Dockerisation)
+	- [How it Works?](/pages/How-it-Works)
+	- [Setting Up locally](/pages/Setting-Up-Locally)
+	- [Git Actions Parameters](/pages/Git-Actions-Parameters)
+	- [Python Backend](/pages/Python-Backend)
+	- [Frontend](/pages/Frontend)
 
 - For Contributors
 
-	- [Contribution Guide](/wiki/Contribution-Guide)
 	- [What are GitHub actions?](https://medium.com/better-programming/github-actions-the-what-why-and-how-3868d5a86292)
 	- [What is an API?](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
 	- [Introduction to Dockers](https://medium.com/codingthesmartway-com-blog/docker-beginners-guide-part-1-images-containers-6f3507fffc98)

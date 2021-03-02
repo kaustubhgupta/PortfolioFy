@@ -10,19 +10,19 @@ inputs:
     required: False
     default: 1
   blogs:
-    description: "Whether you want to include blogs in your Portfolio"
+    description: "Include blogs in your Portfolio"
     required: False
     default: False
   hackathons:
-    description: "Apart from Personal projects you can include hackathon projects."
+    description: "Include hackathon projects."
     required: False
     default: False
   stats_choice: 
-    description: "Which type of github stats you want to display in your profile"
+    description: "Type of GitHub Stats"
     required: False
     default: 1
   social_links:
-    description: "You can include all social links including Linkedin, Twitter, Facebook, Medium, Devto here as a string."
+    description: "Linkedin, Twitter, Stackoverflow, Medium, Devto"
     required: False
     default: False
   resume_link:
@@ -30,7 +30,7 @@ inputs:
     required: False
     default: False
   allow_footer:
-    description: "You can control whether you want to display the creator credits footer at the end of the webpage"
+    description: "Display Creator Credits"
     required: False
     default: True
 runs:
