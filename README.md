@@ -54,7 +54,7 @@ jobs:
 ```
 
 ## Available Options
-(To know more about each parameter, jump to [this]() page in documentation)
+(To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy) page in documentation)
 
 | Option         | Default Value | Description                                                                  | Required | Example |
 | -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |

@@ -6,7 +6,7 @@ A developer is usually occupied with many tasks, and sometimes it becomes diffic
 # Basic Workflow
 (_Note: Here the word "workflow" is not for GitHub actions workflow_)
 
-<div align="center"> <img src="./images/workflow.png" align="center"> </div>
+![](./images/workflow.png)
 
 GitHub is the warehouse of the development work done by any developer and that's why it will be the main source of information for us. Fortunately, as GitHub is an open-source platform, it provides the user data access via API(Application Program Interface) that can be parsed using any programming language. I am using Python for this purpose. GitHub provides access to whole data but we require only the important project repositories or [hackathons repositories (if opted)](./pages/Git-Actions-Parameters). To tackle this, one needs to manually assign the label of `project` to the repos and `hackathon` for hackathons.
 

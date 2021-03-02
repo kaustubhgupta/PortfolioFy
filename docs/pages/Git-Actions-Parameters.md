@@ -21,17 +21,13 @@ Currently, there are two levels of the webpage that can be rendered using this a
 
 This is a basic level theme.
 
-<p align="center">
-<img src="./images/gifpreviewL1.gif" align="center">
-</p>
+![](./images/gifpreviewL1.gif)
 
 ### Theme 2
 
 This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.com/theme/resume). It is fully interactive, good looking and more responsive than first in mobile devices.
 
-<p align="center">
-<img src="./images/gifpreviewL2.gif" align="center">
-</p>
+![](./images/gifpreviewL2.gif)
 
 ## Hackathons Entry (`hackathons`)
 Starting version v2.0.1, hackathon is optional to be included in the portfolio. By default, it is False but you can enable it in the workflow as:
@@ -49,11 +45,14 @@ Starting version v2.0.1, hackathon is optional to be included in the portfolio. 
 ## GitHub Stats Choice
 From version v2.0.1, you can choose between two types of stats generation. The basic one looks like this, choice 1: (Made by Anurag Hazra)
 
-<div align="center"> <img src="./images/stats1.PNG" align="center"> </div>
+![](./images/stats1.png)
+
 <br>
 Stats Choice 2 gives detailed report of the profile: (Made by Simon Lecoq
 )
-<div align="center"> <img src="./images/stats2.PNG" align="center"> </div>
+
+![](./images/stats2.png)
+
 <br>
 
 ## Add Social Links
