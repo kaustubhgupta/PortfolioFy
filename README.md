@@ -54,7 +54,7 @@ jobs:
 ```
 
 ## Available Options
-(To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy) page in documentation)
+(To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy/#/./pages/Git-Actions-Parameters) page in documentation)
 
 | Option         | Default Value | Description                                                                  | Required | Example |
 | -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |
@@ -107,6 +107,8 @@ Make sure to enable the blogs parameter in the main workflow:
 - [My Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/website.yml)
 - [My Blogs Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/blog.yml)
 
+## Documentation
+The detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy)
 
 ## Happy?? Do Star ⭐ this Repo. 🤩
 
