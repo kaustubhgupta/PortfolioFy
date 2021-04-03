@@ -13,7 +13,7 @@ theme_selected = sys.argv[2]
 blogs = strtobool(sys.argv[3])
 include_hackathon = strtobool(sys.argv[4])
 stats_choice = sys.argv[5]
-social_links = sys.argv[9]
+social_links = sys.argv[9:]
 resume_link = sys.argv[7]
 allow_footer = bool(sys.argv[8])
 
