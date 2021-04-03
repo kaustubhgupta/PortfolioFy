@@ -102,7 +102,7 @@ elif theme_selected == '2':
 
 currentRepoName = sys.argv[9].split('/')[-1]
 
-print(os.listdir(sys.argv[9])
+print(os.listdir(sys.argv[9]))
 if 'index.html' in os.listdir(sys.argv[9]):
 
     index_path = sys.argv[9] + '/index.html'
