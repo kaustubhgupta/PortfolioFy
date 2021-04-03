@@ -34,17 +34,11 @@ inputs:
     required: False
     default: True
 runs:
-  using: docker
-  image: Dockerfile
-  args:
-    - ${{ inputs.gh_token }}
-    - ${{ inputs.theme }}
-    - ${{ inputs.blogs }}
-    - ${{ inputs.hackathons }}
-    - ${{ inputs.stats_choice }}
-    - ${{ inputs.social_links }}
-    - ${{ inputs.resume_link }}
-    - ${{ inputs.allow_footer }}
+  using: "composite"
+  steps:
+    - run: python -m pip install PyGithub
+      shell: bash
+    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.social_links }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ github.workspace }}
 branding:
   icon: "award"
   color: "green"
