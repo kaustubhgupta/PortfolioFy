@@ -104,7 +104,7 @@ currentRepoName = sys.argv[9].split('/')[-1]
 
 if 'index.html' in os.listdir(sys.argv[9]):
 
-    index_path = sys.argv[9] + 'index.html'
+    index_path = sys.argv[9] + '/index.html'
     with open(index_path, 'r', encoding='utf-8') as f:
         oldIndex = f.read()
 
