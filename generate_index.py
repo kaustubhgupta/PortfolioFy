@@ -92,33 +92,12 @@ else:
 social_data = strtoLinksHTML(social_links, user_data['username'])
 
 if theme_selected == '1':
-    newIndex = genHTMLLevel1(
+    indexFile = genHTMLLevel1(
         user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
 elif theme_selected == '2':
-    newIndex = genHTMLLevel2(user_data, project_repos,
+    indexFile = genHTMLLevel2(user_data, project_repos,
                               hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
-
-currentRepoName = sys.argv[9].split('/')[-1]
-
-if 'index.html' in os.listdir(sys.argv[9]):
-
-    index_path = sys.argv[9] + '/index.html'
-    with open(index_path, 'r', encoding='utf-8') as f:
-        oldIndex = f.read()
-
-    indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
-    oldContents = indexRepo.get_contents('index.html')
-
-    if oldIndex != newIndex:
-        print("Index Contents Updated")
-        indexRepo.update_file(oldContents.path, "Updating Index file",
-                        newIndex, oldContents.sha)
-    else:
-        print("No changes Detected")
-
-else:    
-    print("Writing index.html for first time")
-    indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
-    indexRepo.create_file('index.html', "Adding index file", newIndex, branch="master")
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(indexFile)
