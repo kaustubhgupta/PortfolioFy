@@ -9,8 +9,8 @@ def LinkstoHTML(links_list, git_username):
         return f'<a href="https://www.github.com/{git_username}"><img width="55px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" /></a><span style="display:inline-block; width: 10px;"></span>'
     else:
         for platform in platforms:
-            for link in :
-                if re.search(platform, links_list) is not None:
+            for link in links_list:
+                if re.search(platform, link) is not None:
                     links_data[platform] = link
         
         htmlData = ''
