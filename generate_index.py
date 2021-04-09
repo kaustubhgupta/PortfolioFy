@@ -2,19 +2,22 @@ from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
 from functions.RepoToHTML import repotohtml
-from functions.addSocialLinks import strtoLinksHTML
+from functions.addSocialLinks import LinkstoHTML
 from distutils.util import strtobool
 import sys
 import os
+import re
+
 
 git = Github(sys.argv[1])
 theme_selected = sys.argv[2]
 blogs = strtobool(sys.argv[3])
 include_hackathon = strtobool(sys.argv[4])
 stats_choice = sys.argv[5]
-social_links = sys.argv[6]
+currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
 allow_footer = bool(sys.argv[8])
+social_links = sys.argv[9:]
 
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
@@ -89,15 +92,45 @@ if include_hackathon:
 else:
     hackathon_repos = None
 
-social_data = strtoLinksHTML(social_links, user_data['username'])
+social_data = LinkstoHTML(social_links, user_data['username'])
 
 if theme_selected == '1':
-    indexFile = genHTMLLevel1(
+    newIndex = genHTMLLevel1(
         user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
 elif theme_selected == '2':
-    indexFile = genHTMLLevel2(user_data, project_repos,
+    newIndex = genHTMLLevel2(user_data, project_repos,
                               hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(indexFile)
+
+if 'index.html' in os.listdir(sys.argv[6]):
+
+    index_path = sys.argv[6] + '/index.html'
+    with open(index_path, 'r', encoding='utf-8') as f:
+        oldIndex = f.read()
+
+    blogPattern = "<!-- BLOG-POST-LIST:START -->(.*?)<!-- BLOG-POST-LIST:END -->"
+    blogData = re.search(blogPattern, oldIndex)
+    oldData = blogData.group(1)
+
+    if oldData == '':
+        print("Blog content initially empty")
+    else:
+        print("Adding old blog content to new index!")
+        formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
+        newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
+
+    indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
+    oldContents = indexRepo.get_contents('index.html')
+
+    if oldIndex != newIndex:
+        print("Index Contents Updated")
+        indexRepo.update_file(oldContents.path, "Updating Index file",
+                        newIndex, oldContents.sha)
+    else:
+        print("No changes Detected")
+
+else:    
+    print("Writing index.html for first time")
+    indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
+    indexRepo.create_file('index.html', "Adding index file", newIndex, branch="master")

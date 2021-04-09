@@ -21,10 +21,10 @@ inputs:
     description: "Type of GitHub Stats"
     required: False
     default: 1
-  social_links:
-    description: "Linkedin, Twitter, Stackoverflow, Medium, Devto"
+  current_repo_path:
+    description: "Path of the current Repo"
     required: False
-    default: False
+    default: ${{ github.workspace }}
   resume_link:
     description: "Link for resume pdf uploaded online"
     required: False
@@ -33,18 +33,18 @@ inputs:
     description: "Display Creator Credits"
     required: False
     default: True
+  social_links:
+    description: "Linkedin, Twitter, Stackoverflow, Medium, Devto"
+    required: False
+    default: False
+
 runs:
-  using: docker
-  image: Dockerfile
-  args:
-    - ${{ inputs.gh_token }}
-    - ${{ inputs.theme }}
-    - ${{ inputs.blogs }}
-    - ${{ inputs.hackathons }}
-    - ${{ inputs.stats_choice }}
-    - ${{ inputs.social_links }}
-    - ${{ inputs.resume_link }}
-    - ${{ inputs.allow_footer }}
+  using: "composite"
+  steps:
+    - run: python -m pip install PyGithub
+      shell: bash
+    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.current_repo_path }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ inputs.social_links }} 
+      shell: pwsh
 branding:
   icon: "award"
   color: "green"
