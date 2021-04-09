@@ -111,12 +111,13 @@ if 'index.html' in os.listdir(sys.argv[6]):
 
     blogPattern = "<!-- BLOG-POST-LIST:START -->(.*?)<!-- BLOG-POST-LIST:END -->"
     blogData = re.search(blogPattern, oldIndex)
+    oldData = blogData.group(1)
 
-    if blogData is None:
+    if oldData == '':
         print("Blog content initially empty")
     else:
         print("Adding old blog content to new index!")
-        formatedContent = f"<!-- BLOG-POST-LIST:START -->{blogData}<!-- BLOG-POST-LIST:END -->"
+        formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
         newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
 
     indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
