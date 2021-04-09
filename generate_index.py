@@ -2,7 +2,7 @@ from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
 from functions.RepoToHTML import repotohtml
-from functions.addSocialLinks import strtoLinksHTML
+from functions.addSocialLinks import LinkstoHTML
 from distutils.util import strtobool
 import sys
 import os
@@ -13,9 +13,10 @@ theme_selected = sys.argv[2]
 blogs = strtobool(sys.argv[3])
 include_hackathon = strtobool(sys.argv[4])
 stats_choice = sys.argv[5]
-social_links = sys.argv[9]
+currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
 allow_footer = bool(sys.argv[8])
+social_links = sys.argv[9:]
 
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
@@ -90,7 +91,7 @@ if include_hackathon:
 else:
     hackathon_repos = None
 
-social_data = strtoLinksHTML(social_links, user_data['username'])
+social_data = LinkstoHTML(social_links, user_data['username'])
 
 if theme_selected == '1':
     newIndex = genHTMLLevel1(
@@ -100,8 +101,6 @@ elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
                               hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
-
-currentRepoName = sys.argv[6].split('/')[-1]
 
 if 'index.html' in os.listdir(sys.argv[6]):
 
