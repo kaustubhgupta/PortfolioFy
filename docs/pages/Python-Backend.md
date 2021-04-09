@@ -12,7 +12,7 @@ This is the function that takes in the repo data and user's username to convert 
 
 # functions/addBlogs.py
 
-This file contains all levels of blog entry functions. As this is an optional parameter, it will be called in the themes/level_{num}/level(num) file when the state selected by the user is True. If selected True, the comment present in the HTML file: `<!-- BLOG-ENTRY -->` needs to be replaced with the blogs section HTML which will only have the title and the div tag holding the comment `<!-- BLOG-POST-LIST:START --> <!-- BLOG-POST-LIST:END -->`. This comment is important as this will be used by other actions to insert the blogs. If you are implementing a navigation bar, then that blog header can be enabled by using another comment section as used as a level 2 theme. Here you are free to customize the CSS and HTML tags.
+This file contains all levels of blog entry functions. As this is an optional parameter, it will be called in the themes/level_{num}/level(num) file when the state selected by the user is True. If selected True, the comment present in the HTML file: `<!-- BLOG-ENTRY -->` needs to be replaced with the blogs section HTML which will only have the title and the div tag holding the comment `<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->`. This comment is important as this will be used by other actions to insert the blogs. If you are implementing a navigation bar, then that blog header can be enabled by using another comment section as used as a level 2 theme. Here you are free to customize the CSS and HTML tags.
 
 # functions/addHackathon.py
 
