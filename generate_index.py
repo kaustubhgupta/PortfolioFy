@@ -6,6 +6,7 @@ from functions.addSocialLinks import LinkstoHTML
 from distutils.util import strtobool
 import sys
 import os
+import re
 
 
 git = Github(sys.argv[1])
@@ -107,6 +108,17 @@ if 'index.html' in os.listdir(sys.argv[6]):
     index_path = sys.argv[6] + '/index.html'
     with open(index_path, 'r', encoding='utf-8') as f:
         oldIndex = f.read()
+
+    blogPattern = "<!-- BLOG-POST-LIST:START -->(.*?)<!-- BLOG-POST-LIST:END -->"
+    blogData = re.search(blogPattern, oldIndex)
+    oldData = blogData.group(1)
+
+    if oldData == '':
+        print("Blog content initially empty")
+    else:
+        print("Adding old blog content to new index!")
+        formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
+        newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
 
     indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
     oldContents = indexRepo.get_contents('index.html')
