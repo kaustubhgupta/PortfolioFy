@@ -1,8 +1,6 @@
 ![PortfolioFy](https://socialify.git.ci/kaustubhgupta/PortfolioFy/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Light) 
 <p align="center">
 <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white" align="center">
-<img src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white" align="center">
-<img src="https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white" align="center">
 <img src="https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white "align="center">
 </p>
 
@@ -111,7 +109,7 @@ The detailed documentation for this project is available [here](https://kaustubh
  
 - [Simon Lecoq](https://github.com/lowlighter/metrics) (GitHub stats)
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) (Blogpost Action)
-- [Test Room 7](https://github.com/marketplace/actions/update-files-on-github) (Git action for Commiting files to Repository)
+
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) (Amazing themes)
 
 ## License
