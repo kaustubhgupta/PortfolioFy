@@ -109,19 +109,29 @@ if 'index.html' in os.listdir(sys.argv[6]):
     with open(index_path, 'r', encoding='utf-8') as f:
         oldIndex = f.read()
 
-    blogPattern = "<!-- BLOG-POST-LIST:START -->(.*?)<!-- BLOG-POST-LIST:END -->"
-    blogData = re.search(blogPattern, oldIndex)
-    oldData = blogData.group(1)
-
-    if oldData == '':
-        print("Blog content initially empty")
-    else:
-        print("Adding old blog content to new index!")
-        formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
-        newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
-
     indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
     oldContents = indexRepo.get_contents('index.html')
+
+    if blogs:
+
+        blogPattern = "<!-- BLOG-POST-LIST:START -->(.*?)<!-- BLOG-POST-LIST:END -->"
+        blogData = re.search(blogPattern, oldIndex)
+
+        try:
+            oldData = blogData.group(1)
+
+            if oldData == '':
+                print("Blog content initially empty")
+            else:
+                print("Adding old blog content to new index!")
+                formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
+                newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
+
+        except:
+            print("Error in Blogs updation content")
+    
+    else:
+        print("Blogs content updation not enabled by user, therefore skipping blogs content addition.")
 
     if oldIndex != newIndex:
         print("Index Contents Updated")
