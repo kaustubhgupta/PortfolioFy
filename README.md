@@ -19,11 +19,11 @@ An index file is pushed by this action which with the help of GitHub pages can b
 - A GitHub personal access token will be needed which can be obtained by going to Settings > Developer Settings > Personal Access Tokens.
   <div align="center"> <img src="./images/config.PNG" align="center"> </div>
 
-_Note: If you give personal repositories access then they will be added to the sections but their links will not work_
+_Note: If you give private repositories access then they will be added to the sections but their links will not work_
 
 ## Repository Setup
 
-GitHub actions can be integgrated in any repository. Create a new folder called `.github/workflows/<any-name>.yml`. Paste the following starter code:
+GitHub actions can be integrated in any repository. Create a new folder called `.github/workflows/<any-name>.yml`. Paste the following starter code:
 
 ```yml
 name: Latest portfolio
