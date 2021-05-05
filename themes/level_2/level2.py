@@ -89,7 +89,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <br>
     <h3><span class="text-secondary">{user_data['git_bio']}</span></h3>
     <span class="text-info">Contact on Email: {user_data['git_email']}</span><br>
-    <span class="text-primary">Followers: Followers: {user_data['git_followers']}, Following: {user_data['git_following']}</span>
+    <span class="text-primary">Followers: {user_data['git_followers']}, Following: {user_data['git_following']}</span>
     <br>
     <br>
     <div class="social-icons">
