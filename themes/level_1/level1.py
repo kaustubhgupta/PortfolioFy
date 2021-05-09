@@ -59,7 +59,7 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if type(result) is not int:
         template = addResumeEntryL1(template, resume_link)
 
-    if footer is True:
+    if allow_footer is True:
         template = footer(template)
 
     if hackathon_repos is not None:
