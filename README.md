@@ -3,6 +3,9 @@
 <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white" align="center">
 <img src="https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white "align="center">
 </p>
+<p align="center">
+  <a href="https://www.producthunt.com/posts/portfoliofy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-portfoliofy" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=297755&theme=dark" alt="PortfolioFy - 🔥 Dynamically Self Updating Portfolio GitHub Action | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  </p>
 
 Developers create hundreds of repositories, and hardly a few of them are presentable and showcased on social media/LinkedIn. This GitHub action allows you to generate your self-updating portfolio consisting of Projects, Hackathons, or maybe the latest Blogs.
 
