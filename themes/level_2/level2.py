@@ -49,7 +49,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     
-    <link href="https://kaustubhgupta.github.io/themescss/level2.css" rel="stylesheet" />
+    <link href="https://www.kaustubhgupta.me/themescss/level2.css" rel="stylesheet" />
     <style>
     {req_css}
     </style>
@@ -126,7 +126,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
     <!-- Smooth Scrolling JS-->
-    <script src="https://kaustubhgupta.github.io/themescss/script.js"></script>
+    <script src="https://www.kaustubhgupta.me/themescss/script.js"></script>
     </body>
 
     </html>
