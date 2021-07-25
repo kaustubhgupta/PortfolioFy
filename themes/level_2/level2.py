@@ -1,8 +1,7 @@
-from functions.addBlogs import addBlogsEntryL2
-from functions.addHackathon import addHackathonEntryL2
-from functions.addResume import addResumeEntryL2
-from functions.addFooter import footer
+from utils.adders import Adder
 from distutils.util import strtobool
+
+adder = Adder()
 
 
 def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link, allow_footer):
@@ -137,27 +136,28 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if stats_choice == '1':
         statsImg = f'''<img class="img-fluid" src="https://github-readme-stats.vercel.app/api?username={user_data['username']}&show_icons=true&theme=radical&count_private=true">'''
         template = template.replace('<!-- GITHUBSTATS-ENTRY -->', statsImg)
-        
+
     elif stats_choice == '2':
         statsImg = f'''<img class="img-fluid" src="https://metrics.lecoq.io/{user_data['username']}?followup=1&isocalendar=1">'''
         template = template.replace('<!-- GITHUBSTATS-ENTRY -->', statsImg)
 
     if blogs:
-        template = addBlogsEntryL2(template)
+        template = adder.addBlogsL2(template)
 
-    try: 
-        result = strtobool(resume_link) 
+    try:
+        result = strtobool(resume_link)
     except:
         result = resume_link
 
     if type(result) is not int:
-        template = addResumeEntryL2(template, resume_link)
+        template = adder.addResumeL2(template, resume_link)
 
     if allow_footer is True:
-        template = footer(template)
+        template = adder.addFooter(template)
 
     if hackathon_repos is not None:
-        retunFile = addHackathonEntryL2(hackathon_repos, user_data, template)
+        retunFile = adder.addHackathonL2(
+            hackathon_repos, user_data["latest_updated"], template)
         return retunFile
     else:
         return template

@@ -1,8 +1,7 @@
 from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
-from functions.RepoToHTML import repotohtml
-from functions.addSocialLinks import LinkstoHTML
+from utils.convertors import Convertors
 from distutils.util import strtobool
 import sys
 import os
@@ -19,6 +18,7 @@ resume_link = sys.argv[7]
 allow_footer = strtobool(sys.argv[8])
 social_links = sys.argv[9:]
 
+convert = Convertors()
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
 
@@ -86,13 +86,14 @@ end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
 
-project_repos = repotohtml(project_data, git_username)
+project_repos = convert.repoDataToHTML(project_data, git_username)
 if include_hackathon:
-    hackathon_repos = repotohtml(hackathon_data, git_username)
+    hackathon_repos = convert.repoDataToHTML(hackathon_data, git_username)
 else:
     hackathon_repos = None
 
-social_data = LinkstoHTML(social_links, user_data['username'])
+social_data = convert.soicalLinksListToHTML(
+    social_links, user_data['username'])
 
 if theme_selected == '1':
     newIndex = genHTMLLevel1(
