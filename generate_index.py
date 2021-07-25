@@ -16,7 +16,7 @@ include_hackathon = strtobool(sys.argv[4])
 stats_choice = sys.argv[5]
 currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
-allow_footer = bool(sys.argv[8])
+allow_footer = strtobool(sys.argv[8])
 social_links = sys.argv[9:]
 
 start = git.rate_limiting[0]
@@ -100,7 +100,7 @@ if theme_selected == '1':
 
 elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
-                              hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
+                             hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
 
 if 'index.html' in os.listdir(sys.argv[6]):
@@ -125,22 +125,24 @@ if 'index.html' in os.listdir(sys.argv[6]):
             else:
                 print("Adding old blog content to new index!")
                 formatedContent = f"<!-- BLOG-POST-LIST:START -->{oldData}<!-- BLOG-POST-LIST:END -->"
-                newIndex = newIndex.replace("<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
+                newIndex = newIndex.replace(
+                    "<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->", formatedContent)
 
         except:
             print("Error in Blogs updation content")
-    
+
     else:
         print("Blogs content updation not enabled by user, therefore skipping blogs content addition.")
 
     if oldIndex != newIndex:
         print("Index Contents Updated")
         indexRepo.update_file(oldContents.path, "Updating Index file",
-                        newIndex, oldContents.sha)
+                              newIndex, oldContents.sha)
     else:
         print("No changes Detected")
 
-else:    
+else:
     print("Writing index.html for first time")
     indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
-    indexRepo.create_file('index.html', "Adding index file", newIndex, branch="master")
+    indexRepo.create_file('index.html', "Adding index file",
+                          newIndex, branch="master")
