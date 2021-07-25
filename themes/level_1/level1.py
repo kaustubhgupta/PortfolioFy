@@ -25,7 +25,7 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     {social_links}
     <br>
     <h1 style="color:#d45131"> My Projects👇</h1>
-    <text class="text-info">(These repositories are tagged as project. *Updated: {user_data['latest_updated']})</text>
+    <text class="text-info">*Updated: {user_data["latest_updated"]}</text>
     <br>
     {project_repos}
     <br>
