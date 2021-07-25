@@ -111,6 +111,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, stats_choice
     <section class="resume-section" id="projects">
     <div class="resume-section-content">
     <h2 class="mb-5">My Projects 👇</h2>
+    <text class="text-info">*Updated: {user_data["latest_updated"]}</text>
     {project_repos}
     </div>
     </section>
