@@ -37,19 +37,20 @@ class Convertors:
             htmlData += f'<a href="https://www.github.com/{git_username}"><img width="55px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" /></a><span style="display:inline-block; width: 10px;"></span>'
             return htmlData
 
-    def repoDataToHTML(self, data: dict, git_username: str) -> str:
+    def repoDataToHTML(self, data: dict, git_username: str, projects_sort_by: str) -> str:
         '''
         Function to convert the repository data (title, topics, forks, stars, description) into GitHub looking repository view.
-        All repositories will be clubbed together.
+        All repositories will be clubbed together. 
+        Sorting parameter controls 
         '''
-
+        sort_by = 'repo_' + projects_sort_by
         repositoresHTML = ''
 
         if len(data) != 0:
             count_project = 1
 
             temp = dict(sorted(data.items(),
-                               key=lambda x: x[1]['repo_stars']))
+                               key=lambda x: x[1][sort_by]))
 
             projects_names = list(temp.keys())[::-1]
 

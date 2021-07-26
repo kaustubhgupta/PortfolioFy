@@ -16,7 +16,8 @@ stats_choice = sys.argv[5]
 currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
 allow_footer = strtobool(sys.argv[8])
-social_links = sys.argv[9:]
+projects_sort_by = sys.argv[9]
+social_links = sys.argv[10:]
 
 convert = Convertors()
 start = git.rate_limiting[0]
@@ -86,9 +87,9 @@ end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
 
-project_repos = convert.repoDataToHTML(project_data, git_username)
+project_repos = convert.repoDataToHTML(project_data, git_username, projects_sort_by)
 if include_hackathon:
-    hackathon_repos = convert.repoDataToHTML(hackathon_data, git_username)
+    hackathon_repos = convert.repoDataToHTML(hackathon_data, git_username, projects_sort_by)
 else:
     hackathon_repos = None
 

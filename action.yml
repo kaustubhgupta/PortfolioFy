@@ -33,6 +33,10 @@ inputs:
     description: "Display Creator Credits"
     required: False
     default: True
+  project_sort_by:
+    description: "Sorting the projects according to count of number of stars or forks"
+    required: False
+    default: 'stars'
   social_links:
     description: "Linkedin, Twitter, Stackoverflow, Medium, Devto"
     required: False
