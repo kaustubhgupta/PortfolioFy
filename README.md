@@ -58,8 +58,9 @@ jobs:
 | `hackathons`   | `False`       | Include repositories that were part of hackathon | No       |  True
 | `stats_choice` | `1`           | Type of GitHub stats: 1 or 2       | No       |  2
 | `social_links` | `False`       | Links for Linkedin, Twitter, Dev.to, Medium, and Stackoverflow.  | No       | 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'|
-| `resume_link` | `False` | Link for resume pdf uploaded online | False | 'https://drive.google.com/fnskaml' |
-| `allow_footer` | `True` | Whether you want to display the credits of the creator the end of the webpage | False | False |
+| `resume_link` | `False` | Link for resume pdf uploaded online | No | 'https://drive.google.com/fnskaml' |
+| `allow_footer` | `True` | Whether you want to display the credits of the creator the end of the webpage | No | False |
+| `project_sort_by` | `'stars'` | Control the sorting of projects by `'stars'` or `'forks'` | No | `'forks'` |
 
 ## Regarding Blog Updates
 
