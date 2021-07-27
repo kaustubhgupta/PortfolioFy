@@ -1,5 +1,4 @@
 from utils.adders import Adder
-from distutils.util import strtobool
 
 adder = Adder()
 
@@ -50,15 +49,10 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if blogs:
         template = adder.addBlogsL1(template)
 
-    try:
-        result = strtobool(resume_link)
-    except:
-        result = resume_link
+    if 'false' not in resume_link:
+        template = adder.addResumeL2(template, resume_link)
 
-    if type(result) is not int:
-        template = adder.addResumeL1(template, resume_link)
-
-    if allow_footer is True:
+    if allow_footer:
         template = adder.addFooter(template)
 
     if hackathon_repos is not None:
