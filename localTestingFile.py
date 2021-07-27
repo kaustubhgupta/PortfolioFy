@@ -9,12 +9,12 @@ import re
 
 git = Github(sys.argv[1])
 theme_selected = sys.argv[2]
-blogs = eval(sys.argv[3])
-include_hackathon = eval(sys.argv[4])
+blogs = eval(sys.argv[3].title())
+include_hackathon = eval(sys.argv[4].title())
 stats_choice = sys.argv[5]
 # currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
-allow_footer = eval(sys.argv[8])
+allow_footer = eval(sys.argv[8].title())
 projects_sort_by = sys.argv[9]
 social_links = sys.argv[10:]
 
