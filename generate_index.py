@@ -2,7 +2,6 @@ from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
 from utils.convertors import Convertors
-from distutils.util import strtobool
 import sys
 import os
 import re
@@ -10,12 +9,12 @@ import re
 
 git = Github(sys.argv[1])
 theme_selected = sys.argv[2]
-blogs = strtobool(sys.argv[3])
-include_hackathon = strtobool(sys.argv[4])
+blogs = eval(sys.argv[3])
+include_hackathon = eval(sys.argv[4])
 stats_choice = sys.argv[5]
 currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
-allow_footer = strtobool(sys.argv[8])
+allow_footer = eval(sys.argv[8])
 projects_sort_by = sys.argv[9]
 social_links = sys.argv[10:]
 
