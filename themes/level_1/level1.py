@@ -49,13 +49,8 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     if blogs:
         template = adder.addBlogsL1(template)
 
-    try:
-        result = eval(resume_link)
-    except:
-        result = resume_link
-
-    if type(result) is not bool:
-        template = adder.addResumeL1(template, resume_link)
+    if 'false' not in resume_link:
+        template = adder.addResumeL2(template, resume_link)
 
     if allow_footer:
         template = adder.addFooter(template)
