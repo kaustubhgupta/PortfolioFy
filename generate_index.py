@@ -100,11 +100,11 @@ social_data = convert.soicalLinksListToHTML(
 
 if theme_selected == '1':
     newIndex = genHTMLLevel1(
-        user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
+        user_data, project_repos, hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
 elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
-                             hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
+                             hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
 
 newIndex = adder.addGitHubStats(newIndex, stats_choice, stats_customization, git_username, theme_selected)
