@@ -105,6 +105,8 @@ Make sure to enable the blogs parameter in the main workflow:
 ## Documentation
 The detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy)
 
+_Note : Currently, the documentation is not updated with latest changes. It will be done soon!_
+
 ## Happy?? Do Star ⭐ this Repo. 🤩
 
 ## Special Mentions
