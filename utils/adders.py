@@ -140,10 +140,6 @@ class Adder:
             '7': 'https://sourcekarma-og.vercel.app/api/'
         }
 
-        try:
-            statsCustomStatus = eval(statsCustom)
-        except:
-            statsCustomStatus = True
 
         statsImgLink = statsLinks[statsChoice] + username
 
@@ -153,7 +149,7 @@ class Adder:
         elif statsChoice == '3':
             statsImgLink += '&theme=vue'
 
-        if statsCustomStatus:
+        if 'false' not in statsCustom:
             statsImgLink += statsCustom
         
         if themeSelected == '2':
