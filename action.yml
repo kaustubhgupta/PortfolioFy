@@ -25,6 +25,10 @@ inputs:
     description: "Path of the current Repo"
     required: False
     default: ${{ github.workspace }}
+  current_repo_branch:
+    description: "Name of the current branch"
+    required: False
+    default: ${{ github.ref }}
   resume_link:
     description: "Link for resume pdf uploaded online"
     required: False
@@ -47,7 +51,7 @@ runs:
   steps:
     - run: python -m pip install PyGithub
       shell: bash
-    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.current_repo_path }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ inputs.project_sort_by }} ${{ inputs.social_links }} 
+    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.current_repo_path }} ${{ inputs.current_repo_branch }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ inputs.project_sort_by }} ${{ inputs.social_links }} 
       shell: pwsh
 branding:
   icon: "award"

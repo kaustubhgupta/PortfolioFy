@@ -2,6 +2,7 @@ from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
 from utils.convertors import Convertors
+from utils.adders import Adder
 import sys
 import os
 import re
@@ -13,12 +14,14 @@ blogs = eval(sys.argv[3].title())
 include_hackathon = eval(sys.argv[4].title())
 stats_choice = sys.argv[5]
 # currentRepoName = sys.argv[6].split('/')[-1]
-resume_link = sys.argv[7]
-allow_footer = eval(sys.argv[8].title())
-projects_sort_by = sys.argv[9]
-social_links = sys.argv[10:]
+# currentRepoBranch = sys.argv[7].split('/')[-1]
+resume_link = sys.argv[8]
+allow_footer = eval(sys.argv[9].title())
+projects_sort_by = sys.argv[10]
+social_links = sys.argv[11:]
 
 convert = Convertors()
+adder = Adder()
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
 
@@ -97,12 +100,13 @@ social_data = convert.soicalLinksListToHTML(
 
 if theme_selected == '1':
     newIndex = genHTMLLevel1(
-        user_data, project_repos, hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
+        user_data, project_repos, hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
 elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
-                             hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
+                             hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
+newIndex = adder.addGitHubStats(newIndex, stats_choice, git_username, theme_selected)
 
 with open('index.html', 'w', encoding='UTF-8') as f:
     f.write(newIndex)
