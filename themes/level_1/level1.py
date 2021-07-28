@@ -3,7 +3,7 @@ from utils.adders import Adder
 adder = Adder()
 
 
-def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice, social_links, resume_link, allow_footer):
+def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, social_links, resume_link, allow_footer):
 
     template = f'''
     <html>
@@ -38,13 +38,6 @@ def genHTMLLevel1(user_data, project_repos, hackathon_repos, blogs, stats_choice
     </body>
     </html>
     '''
-    if stats_choice == '1':
-        statsImg = f'''<img class="img-stats" src="https://github-readme-stats.vercel.app/api?username={user_data['username']}&show_icons=true&theme=radical&count_private=true">'''
-        template = template.replace('<!-- GITHUBSTATS-ENTRY -->', statsImg)
-
-    elif stats_choice == '2':
-        statsImg = f'''<img src="https://metrics.lecoq.io/{user_data['username']}?followup=1&isocalendar=1">'''
-        template = template.replace('<!-- GITHUBSTATS-ENTRY -->', statsImg)
 
     if blogs:
         template = adder.addBlogsL1(template)

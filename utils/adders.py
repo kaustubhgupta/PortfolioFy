@@ -125,3 +125,42 @@ class Adder:
         indexWithResume = index_file.replace(
             '<!-- RESUME-ENTRY -->', resumeTemplate)
         return indexWithResume
+
+    def addGitHubStats(self, index_file: str, statsChoice: str, statsCustom: str, username: str, themeSelected: str) -> str:
+        '''
+        Function to add GitHub stats. Different choices will be available for each stats. Stats can be customized.
+        '''
+        statsLinks = {
+            '1': 'https://github-readme-stats.vercel.app/api?username=', 
+            '2': 'https://metrics.lecoq.io/',
+            '3': 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=',
+            '4': 'https://github-readme-streak-stats.herokuapp.com/?user=',
+            '5': 'https://github-contribution-stats.vercel.app/api/?username=',
+            '6': 'https://github-profile-trophy.vercel.app/?username=',
+            '7': 'https://sourcekarma-og.vercel.app/api/'
+        }
+
+        try:
+            statsCustomStatus = eval(statsCustom)
+        except:
+            statsCustomStatus = True
+
+        statsImgLink = statsLinks[statsChoice] + username
+
+        if statsChoice == '7':
+            statsImgLink += '/github'
+
+        elif statsChoice == '3':
+            statsImgLink += '&theme=vue'
+
+        if statsCustomStatus:
+            statsImgLink += statsCustom
+        
+        if themeSelected == '2':
+            statsImgTag = f'''<img class="img-fluid" src="{statsImgLink}">'''
+        elif themeSelected == '1':
+            statsImgTag = f'''<img src="{statsImgLink}">'''
+
+        indexWithStats = index_file.replace('<!-- GITHUBSTATS-ENTRY -->', statsImgTag)
+
+        return indexWithStats

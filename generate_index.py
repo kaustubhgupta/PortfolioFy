@@ -2,6 +2,7 @@ from github import Github
 from themes.level_1.level1 import genHTMLLevel1
 from themes.level_2.level2 import genHTMLLevel2
 from utils.convertors import Convertors
+from utils.adders import Adder
 import sys
 import os
 import re
@@ -16,9 +17,11 @@ currentRepoName = sys.argv[6].split('/')[-1]
 resume_link = sys.argv[7]
 allow_footer = eval(sys.argv[8].title())
 projects_sort_by = sys.argv[9]
-social_links = sys.argv[10:]
+stats_customization = sys.argv[10]
+social_links = sys.argv[11:]
 
 convert = Convertors()
+adder = Adder()
 start = git.rate_limiting[0]
 print(f'Request left at start of the script: {start}')
 
@@ -103,6 +106,8 @@ elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
                              hackathon_repos, blogs, stats_choice, social_data, resume_link, allow_footer)
 
+
+newIndex = adder.addGitHubStats(newIndex, stats_choice, stats_customization, git_username, theme_selected)
 
 if 'index.html' in os.listdir(sys.argv[6]):
 
