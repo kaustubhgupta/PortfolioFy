@@ -14,11 +14,12 @@ blogs = eval(sys.argv[3].title())
 include_hackathon = eval(sys.argv[4].title())
 stats_choice = sys.argv[5]
 currentRepoName = sys.argv[6].split('/')[-1]
-resume_link = sys.argv[7]
-allow_footer = eval(sys.argv[8].title())
-projects_sort_by = sys.argv[9]
-stats_customization = sys.argv[10]
-social_links = sys.argv[11:]
+currentRepoBranch = sys.argv[7].split('/')[-1]
+resume_link = sys.argv[8]
+allow_footer = eval(sys.argv[9].title())
+projects_sort_by = sys.argv[10]
+stats_customization = sys.argv[11]
+social_links = sys.argv[12:]
 
 convert = Convertors()
 adder = Adder()
@@ -151,4 +152,4 @@ else:
     print("Writing index.html for first time")
     indexRepo = git.get_repo(f"{git_username}/{currentRepoName}")
     indexRepo.create_file('index.html', "Adding index file",
-                          newIndex, branch="master")
+                          newIndex, branch=currentRepoBranch)
