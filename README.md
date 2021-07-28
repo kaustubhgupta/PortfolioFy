@@ -56,7 +56,7 @@ jobs:
 | `theme`        | `1`           | Level of webpage you want to render: 1 or 2                                   | No       |  1      | 
 | `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  True   |
 | `hackathons`   | `False`       | Include repositories that were part of hackathon | No       |  True
-| `stats_choice` | `1`           | Type of GitHub stats: 1 or 2       | No       |  2
+| `stats_choice` | `1`           | Type of GitHub stats. You can choose from 7 types of GitHub stats. (more details will be updated soon)       | No       |  2
 | `social_links` | `False`       | Links for Linkedin, Twitter, Dev.to, Medium, and Stackoverflow.  | No       | `'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'`|
 | `resume_link` | `False` | Link for resume pdf uploaded online | No | `'https://drive.google.com/fnskaml'` |
 | `allow_footer` | `True` | Whether you want to display the credits of the creator the end of the webpage | No | False |
