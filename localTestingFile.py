@@ -14,10 +14,10 @@ blogs = eval(sys.argv[3].title())
 include_hackathon = eval(sys.argv[4].title())
 stats_choice = sys.argv[5]
 # currentRepoName = sys.argv[6].split('/')[-1]
-resume_link = sys.argv[7]
-allow_footer = eval(sys.argv[8].title())
-projects_sort_by = sys.argv[9]
-stats_customization = sys.argv[10]
+# currentRepoBranch = sys.argv[7].split('/')[-1]
+resume_link = sys.argv[8]
+allow_footer = eval(sys.argv[9].title())
+projects_sort_by = sys.argv[10]
 social_links = sys.argv[11:]
 
 convert = Convertors()
@@ -106,7 +106,7 @@ elif theme_selected == '2':
     newIndex = genHTMLLevel2(user_data, project_repos,
                              hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
-newIndex = adder.addGitHubStats(newIndex, stats_choice, stats_customization, git_username, theme_selected)
+newIndex = adder.addGitHubStats(newIndex, stats_choice, git_username, theme_selected)
 
 with open('index.html', 'w', encoding='UTF-8') as f:
     f.write(newIndex)
