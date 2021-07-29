@@ -145,9 +145,6 @@ class Adder:
 
         if statsChoice == '7':
             statsImgLink += '/github'
-
-        elif statsChoice == '3':
-            statsImgLink += '&theme=vue'
         
         if themeSelected == '2':
             statsImgTag = f'''<img class="img-fluid" src="{statsImgLink}">'''
