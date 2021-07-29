@@ -21,6 +21,10 @@ inputs:
     description: "Type of GitHub Stats"
     required: False
     default: 1
+  stats_customization:
+    description: "Custom parameters for the GitHub stats choosen"
+    required: False
+    default: False
   current_repo_path:
     description: "Path of the current Repo"
     required: False

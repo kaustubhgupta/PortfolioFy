@@ -18,7 +18,8 @@ currentRepoBranch = sys.argv[7].split('/')[-1]
 resume_link = sys.argv[8]
 allow_footer = eval(sys.argv[9].title())
 projects_sort_by = sys.argv[10]
-social_links = sys.argv[11:]
+stats_customization = sys.argv[11]
+social_links = sys.argv[12:]
 
 convert = Convertors()
 adder = Adder()
@@ -107,7 +108,7 @@ elif theme_selected == '2':
                              hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
 
-newIndex = adder.addGitHubStats(newIndex, stats_choice, git_username, theme_selected)
+newIndex = adder.addGitHubStats(newIndex, stats_choice, git_username, theme_selected, stats_customization)
 
 if 'index.html' in os.listdir(sys.argv[6]):
 
