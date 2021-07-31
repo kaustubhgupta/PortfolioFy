@@ -108,6 +108,8 @@ Make sure to enable the blogs parameter in the main workflow:
 - [My Blogs Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/blog.yml)
 
 
+_Note : Currently, the documentation is not updated with latest changes. It will be done soon!_
+
 ## Happy?? Do Star ⭐ this Repo. 🤩
 
 ## Special Mentions
