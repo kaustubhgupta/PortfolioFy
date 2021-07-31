@@ -17,7 +17,7 @@ An index file is pushed by this action which with the help of GitHub pages can b
 
 ## Getting Your Profile Ready
 
-- The repositories need to have `project`  topic to add to the project section and `hackathon` topic to add them in the hackathon section. If you add both the topics to the same repository then it will be reflected in both sections!
+- The repositories need to have a `project`  topic to add to the project section and a `hackathon` topic to add them in the hackathon section. If you add both the topics to the same repository then it will be reflected in both sections!
 
 - A GitHub personal access token will be needed which can be obtained by going to Settings > Developer Settings > Personal Access Tokens.
   <div align="center"> <img src="./images/config.PNG" align="center"> </div>
@@ -26,14 +26,14 @@ _Note: If you give private repositories access then they will be added to the se
 
 ## Repository Setup
 
-GitHub actions can be integrated in any repository. Create a new folder called `.github/workflows/<any-name>.yml`. Paste the following starter code:
+GitHub actions can be integrated into any repository. Create a new folder called `.github/workflows/<any-name>.yml`. Paste the following starter code:
 
 ```yml
 name: Latest portfolio
 on:
   schedule:
     - cron: '0 0 * * *'
-    # This makes the action to run at the end of every day. Customize this accordingly or you can also trigger this action for GitHub events (Pull, Push). Check GitHub actions page for that.
+    # This makes the action run at the end of every day. Customize this accordingly or you can also trigger this action for GitHub events (Pull, Push). Check the GitHub actions page for that.
   workflow_dispatch:
 
 jobs:
@@ -48,19 +48,24 @@ jobs:
 ```
 
 ## Available Options
-(To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy/#/./pages/Git-Actions-Parameters) page in documentation)
+(To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy/#/./pages/Git-Actions-Parameters) page in the documentation)
 
 | Option         | Default Value | Description                                                                  | Required | Example |
 | -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |
 | `gh_token`     | NA            | GitHub Personal Access token                                                 | Yes      |  NA     |
-| `theme`        | `1`           | Level of webpage you want to render: 1 or 2                                   | No       |  1      | 
+| `theme`        | `1`           | Level of the webpage you want to render: 1 or 2                                   | No       |  1      | 
 | `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  True   |
-| `hackathons`   | `False`       | Include repositories that were part of hackathon | No       |  True
-| `stats_choice` | `1`           | Type of GitHub stats: 1 or 2       | No       |  2
-| `social_links` | `False`       | Links for Linkedin, Twitter, Dev.to, Medium, and Stackoverflow.  | No       | 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'|
-| `resume_link` | `False` | Link for resume pdf uploaded online | No | 'https://drive.google.com/fnskaml' |
-| `allow_footer` | `True` | Whether you want to display the credits of the creator the end of the webpage | No | False |
+| `hackathons`   | `False`       | Include repositories that are tagged as `hackathon` topic | No       |  True |
+| `stats_choice` | `1`           | Type/Style of GitHub stats you want to include. A total of 7 types of GitHub stats are available. See the sections below for more information     | No       |  6 |
+| `stats_customization` | Comming Soon | Customize the GitHub stats chosen by passing additional parameters supported | Comming Soon | Comming Soon| 
+| `social_links` | `False`       | Links for Linkedin, Twitter, Dev. to, Medium, or Stackoverflow can be included. All handles are not necessary, you can provide them as comma-separated list as per need in any order | No       | `'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'`|
+| `resume_link` | `False` | Link for resume uploaded online | No | `'https://drive.google.com/fnskaml...'` |
+| `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | False |
 | `project_sort_by` | `'stars'` | Control the sorting of projects by `'stars'` or `'forks'` | No | `'forks'` |
+
+## Documentation
+The detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy)
+
 
 ## Regarding Blog Updates
 
@@ -102,18 +107,19 @@ Make sure to enable the blogs parameter in the main workflow:
 - [My Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/website.yml)
 - [My Blogs Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/blog.yml)
 
-## Documentation
-The detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy)
 
 ## Happy?? Do Star ⭐ this Repo. 🤩
 
 ## Special Mentions
 
 - [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) (GitHub stats)
- 
 - [Simon Lecoq](https://github.com/lowlighter/metrics) (GitHub stats)
+- [Casper](https://github.com/vn7n24fzkq) (GitHub stats)
+- [Jonah Lawrence](https://github.com/DenverCoder1) (GitHub stats)
+- [Joshua Clifford Reyes](https://github.com/LordDashMe) (GitHub stats)
+- [ryo-ma](https://github.com/ryo-ma) (GitHub stats)
+- [Vincent Voyer](https://github.com/vvo) (GitHub stats)
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) (Blogpost Action)
-
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) (Amazing themes)
 
 ## License

@@ -41,7 +41,7 @@ class Convertors:
         '''
         Function to convert the repository data (title, topics, forks, stars, description) into GitHub looking repository view.
         All repositories will be clubbed together. 
-        Sorting parameter controls 
+        Sorting parameter controls the projects arrangement according to stars or forks 
         '''
         sort_by = 'repo_' + projects_sort_by
         repositoresHTML = ''

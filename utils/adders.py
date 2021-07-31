@@ -115,7 +115,7 @@ class Adder:
 
     def addResumeL2(self, index_file: str, resume_link: str) -> str:
         '''
-        Function to add "View Resume" hyperlink in level 1 theme
+        Function to add "View Resume" hyperlink in level 2 theme
         '''
 
         resumeTemplate = f'''
