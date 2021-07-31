@@ -21,6 +21,10 @@ inputs:
     description: "Type of GitHub Stats"
     required: False
     default: 1
+  stats_customization:
+    description: "Custom parameters for the GitHub stats choosen"
+    required: False
+    default: False
   current_repo_path:
     description: "Path of the current Repo"
     required: False
@@ -51,7 +55,7 @@ runs:
   steps:
     - run: python -m pip install PyGithub
       shell: bash
-    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.current_repo_path }} ${{ inputs.current_repo_branch }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ inputs.project_sort_by }} ${{ inputs.social_links }} 
+    - run: python ${{ github.action_path }}/generate_index.py ${{ inputs.gh_token }} ${{ inputs.theme }} ${{ inputs.blogs }} ${{ inputs.hackathons }} ${{ inputs.stats_choice }} ${{ inputs.current_repo_path }} ${{ inputs.current_repo_branch }} ${{ inputs.resume_link }} ${{ inputs.allow_footer }} ${{ inputs.project_sort_by }} ${{ inputs.stats_customization }} ${{ inputs.social_links }} 
       shell: pwsh
 branding:
   icon: "award"

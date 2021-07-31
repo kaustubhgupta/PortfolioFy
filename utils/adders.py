@@ -126,7 +126,7 @@ class Adder:
             '<!-- RESUME-ENTRY -->', resumeTemplate)
         return indexWithResume
 
-    def addGitHubStats(self, index_file: str, statsChoice: str, username: str, themeSelected: str) -> str:
+    def addGitHubStats(self, index_file: str, statsChoice: str, username: str, themeSelected: str, statsCustomization: str) -> str:
         '''
         Function to add GitHub stats. Different choices will be available for each stats. Stats can be customized.
         '''
@@ -145,6 +145,9 @@ class Adder:
 
         if statsChoice == '7':
             statsImgLink += '/github'
+
+        # if 'false' not in statsCustomization:
+        #     statsImgLink += statsCustomization
         
         if themeSelected == '2':
             statsImgTag = f'''<img class="img-fluid" src="{statsImgLink}">'''
