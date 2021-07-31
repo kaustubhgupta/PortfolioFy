@@ -146,8 +146,8 @@ class Adder:
         if statsChoice == '7':
             statsImgLink += '/github'
 
-        if 'false' not in statsCustomization:
-            statsImgLink += statsCustomization
+        # if 'false' not in statsCustomization:
+        #     statsImgLink += statsCustomization
         
         if themeSelected == '2':
             statsImgTag = f'''<img class="img-fluid" src="{statsImgLink}">'''
