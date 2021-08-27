@@ -1,14 +1,14 @@
 # vscode files
 .vscode
+*.code-workspace
 
 # python cache
 __pycache__/
 
 # testing file
-index.html
+*.html
 test.txt
 randomtestfile.py
-test.html
 
 # environment 
 env
