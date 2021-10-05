@@ -103,7 +103,7 @@ Make sure to enable the blogs parameter in the main workflow:
 ```
 
 ## Examples
-- [My Portfolio](https://kaustubhgupta.github.io/)
+- [My Portfolio](https://www.kaustubhgupta.me/)
 - [My Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/website.yml)
 - [My Blogs Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/blog.yml)
 
