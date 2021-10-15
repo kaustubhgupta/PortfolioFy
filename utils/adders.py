@@ -137,7 +137,8 @@ class Adder:
             '4': 'https://github-readme-streak-stats.herokuapp.com/?user=',
             '5': 'https://github-contribution-stats.vercel.app/api/?username=',
             '6': 'https://github-profile-trophy.vercel.app/?username=',
-            '7': 'https://sourcekarma-og.vercel.app/api/'
+            '7': 'https://sourcekarma-og.vercel.app/api/',
+            '8': 'https://activity-graph.herokuapp.com/graph?username='
         }
 
         statsImgLink = statsLinks[statsChoice] + username
