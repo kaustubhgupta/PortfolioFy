@@ -15,7 +15,7 @@ Developers create hundreds of repositories, and hardly a few of them are present
 
 An index file is pushed by this action which with the help of GitHub pages can be deployed as soon as it is committed to the repository. If you write blogs, then you can add [Blog Post Workflow](https://github.com/marketplace/actions/blog-post-workflow) to the main workflow for updating your portfolio. !
 
-## Getting Your Profile Ready
+## Getting Your Profile Ready ⚡
 
 - The repositories need to have a `project`  topic to add to the project section and a `hackathon` topic to add them in the hackathon section. If you add both the topics to the same repository then it will be reflected in both sections!
 
@@ -24,7 +24,7 @@ An index file is pushed by this action which with the help of GitHub pages can b
 
 _Note: If you give private repositories access then they will be added to the sections but their links will not work_
 
-## Repository Setup
+## Repository Setup 😉
 
 GitHub actions can be integrated into any repository. Create a new folder called `.github/workflows/<any-name>.yml`. Paste the following starter code:
 
@@ -47,7 +47,7 @@ jobs:
           gh_token: ${{ secrets.TOKEN }} # Create a secret to store the access token 
 ```
 
-## Available Options
+## Available Options 🤔
 (To know more about each parameter, jump to [this](https://kaustubhgupta.github.io/PortfolioFy/#/./pages/Git-Actions-Parameters) page in the documentation)
 
 | Option         | Default Value | Description                                                                  | Required | Example |
@@ -63,7 +63,7 @@ jobs:
 | `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | `False` |
 | `project_sort_by` | `'stars'` | Control the sorting of projects by `'stars'` or `'forks'` | No | `'forks'` |
 
-## Documentation
+## Documentation 📜
 The detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy)
 
 
@@ -109,7 +109,7 @@ Make sure to enable the blogs parameter in the main workflow:
 
 ## Happy?? Do Star ⭐ this Repo. 🤩
 
-## Special Mentions
+## Special Mentions 😃
 
 - [Anurag Hazra](https://github.com/anuraghazra) (GitHub stats)
 - [Simon Lecoq](https://github.com/lowlighter/metrics) (GitHub stats)
@@ -122,6 +122,6 @@ Make sure to enable the blogs parameter in the main workflow:
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) (Blogpost Action)
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) (Amazing themes)
 
-## License
+## License 📝
 
 [![MIT Licence](https://img.shields.io/github/license/kaustubhgupta/PortfolioFy)](https://choosealicense.com/licenses/mit/)
