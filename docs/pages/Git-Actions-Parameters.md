@@ -5,14 +5,14 @@ These are the parameters that are used in the GitHub Action PortfolioFy as defau
 | Option         | Default Value | Description                                                                  | Required | Example |
 | -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |
 | `gh_token`     | NA            | GitHub Personal Access token                                                 | Yes      |  NA     |
-| `theme`        | `1`           | Level of the webpage you want to render: 1 or 2                                   | No       |  1      | 
-| `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  True   |
-| `hackathons`   | `False`       | Include repositories that are tagged as `hackathon` topic | No       |  True |
-| `stats_choice` | `1`           | Type/Style of GitHub stats you want to include. A total of 7 types of GitHub stats are available. See the sections below for more information     | No       |  6 |
+| `theme`        | `1`           | Level of the webpage you want to render: 1 or 2                                   | No       |  `1`      | 
+| `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  `True`   |
+| `hackathons`   | `False`       | Include repositories that are tagged as `hackathon` topic | No       |  `True` |
+| `stats_choice` | `1`           | Type/Style of GitHub stats you want to include. A total of `8` types of GitHub stats are available. See the sections below for more information     | No       |  `6` |
 | `stats_customization` | Comming Soon | Customize the GitHub stats chosen by passing additional parameters supported | Comming Soon | Comming Soon| 
 | `social_links` | `False`       | Links for Linkedin, Twitter, Dev. to, Medium, or Stackoverflow can be included. All handles are not necessary, you can provide them as comma-separated list as per need in any order | No       | `'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'`|
 | `resume_link` | `False` | Link for resume uploaded online | No | `'https://drive.google.com/fnskaml...'` |
-| `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | False |
+| `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | `False` |
 | `project_sort_by` | `'stars'` | Control the sorting of projects by `'stars'` or `'forks'` | No | `'forks'` |
 
 
@@ -93,6 +93,11 @@ You can choose from 7 types of stats generation. All of them are made by differe
 ![](https://sourcekarma-og.vercel.app/api/kaustubhgupta/github)
 
 _Note: This action requires you to freely sign-up for an account on source karma website. Visit [here](https://sourcekarma.vercel.app/)_
+
+### 8
+[Ashutosh Dwivedi](https://github.com/Ashutosh00710)'s dynamically generated activity graph to show your GitHub activities of last 31 days.
+
+![](https://activity-graph.herokuapp.com/graph?username=kaustubhgupta)
 
 ## `blogs` (Blogs Entry)
 

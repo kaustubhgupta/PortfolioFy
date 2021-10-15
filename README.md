@@ -53,14 +53,14 @@ jobs:
 | Option         | Default Value | Description                                                                  | Required | Example |
 | -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |
 | `gh_token`     | NA            | GitHub Personal Access token                                                 | Yes      |  NA     |
-| `theme`        | `1`           | Level of the webpage you want to render: 1 or 2                                   | No       |  1      | 
-| `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  True   |
-| `hackathons`   | `False`       | Include repositories that are tagged as `hackathon` topic | No       |  True |
-| `stats_choice` | `1`           | Type/Style of GitHub stats you want to include. A total of 7 types of GitHub stats are available. See the sections below for more information     | No       |  6 |
+| `theme`        | `1`           | Level of the webpage you want to render: 1 or 2                                   | No       |  `1`      | 
+| `blogs`        | `False`       | Include blogs in your Portfolio              | No       |  `True`   |
+| `hackathons`   | `False`       | Include repositories that are tagged as `hackathon` topic | No       |  `True` |
+| `stats_choice` | `1`           | Type/Style of GitHub stats you want to include. A total of `8` types of GitHub stats are available. See the sections below for more information     | No       |  `6` |
 | `stats_customization` | Comming Soon | Customize the GitHub stats chosen by passing additional parameters supported | Comming Soon | Comming Soon| 
 | `social_links` | `False`       | Links for Linkedin, Twitter, Dev. to, Medium, or Stackoverflow can be included. All handles are not necessary, you can provide them as comma-separated list as per need in any order | No       | `'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'`|
 | `resume_link` | `False` | Link for resume uploaded online | No | `'https://drive.google.com/fnskaml...'` |
-| `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | False |
+| `allow_footer` | `True` | Whether you want to display the credits of the creator at the end of the webpage | No | `False` |
 | `project_sort_by` | `'stars'` | Control the sorting of projects by `'stars'` or `'forks'` | No | `'forks'` |
 
 ## Documentation 📜
@@ -102,7 +102,7 @@ Make sure to enable the blogs parameter in the main workflow:
             blogs: True
 ```
 
-## Examples 🤖
+## Examples
 - [My Portfolio](https://www.kaustubhgupta.me/)
 - [My Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/website.yml)
 - [My Blogs Workflow File](https://github.com/kaustubhgupta/kaustubhgupta.github.io/blob/master/.github/workflows/blog.yml)
@@ -111,13 +111,14 @@ Make sure to enable the blogs parameter in the main workflow:
 
 ## Special Mentions 😃
 
-- [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) (GitHub stats)
+- [Anurag Hazra](https://github.com/anuraghazra) (GitHub stats)
 - [Simon Lecoq](https://github.com/lowlighter/metrics) (GitHub stats)
 - [Casper](https://github.com/vn7n24fzkq) (GitHub stats)
 - [Jonah Lawrence](https://github.com/DenverCoder1) (GitHub stats)
 - [Joshua Clifford Reyes](https://github.com/LordDashMe) (GitHub stats)
 - [ryo-ma](https://github.com/ryo-ma) (GitHub stats)
 - [Vincent Voyer](https://github.com/vvo) (GitHub stats)
+- [Ashutosh Dwivedi](https://github.com/Ashutosh00710) (GitHub Stats)
 - [Gautam Krishna R](https://github.com/marketplace/actions/blog-post-workflow) (Blogpost Action)
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) (Amazing themes)
 

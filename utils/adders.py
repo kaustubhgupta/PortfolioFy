@@ -131,15 +131,15 @@ class Adder:
         Function to add GitHub stats. Different choices will be available for each stats. Stats can be customized.
         '''
         statsLinks = {
-            '1': 'https://github-readme-stats.vercel.app/api?username=', 
+            '1': 'https://github-readme-stats.vercel.app/api?username=',
             '2': 'https://metrics.lecoq.io/',
             '3': 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=',
             '4': 'https://github-readme-streak-stats.herokuapp.com/?user=',
             '5': 'https://github-contribution-stats.vercel.app/api/?username=',
             '6': 'https://github-profile-trophy.vercel.app/?username=',
-            '7': 'https://sourcekarma-og.vercel.app/api/'
+            '7': 'https://sourcekarma-og.vercel.app/api/',
+            '8': 'https://activity-graph.herokuapp.com/graph?username='
         }
-
 
         statsImgLink = statsLinks[statsChoice] + username
 
@@ -148,12 +148,13 @@ class Adder:
 
         # if 'false' not in statsCustomization:
         #     statsImgLink += statsCustomization
-        
+
         if themeSelected == '2':
             statsImgTag = f'''<img class="img-fluid" src="{statsImgLink}">'''
         elif themeSelected == '1':
             statsImgTag = f'''<img src="{statsImgLink}">'''
 
-        indexWithStats = index_file.replace('<!-- GITHUBSTATS-ENTRY -->', statsImgTag)
+        indexWithStats = index_file.replace(
+            '<!-- GITHUBSTATS-ENTRY -->', statsImgTag)
 
         return indexWithStats
