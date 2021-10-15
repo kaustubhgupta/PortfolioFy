@@ -90,9 +90,11 @@ end = git.rate_limiting[0]
 print(f'Request left at end of the script: {end}')
 print(f'Requests Consumed in this process: {start - end}')
 
-project_repos = convert.repoDataToHTML(project_data, git_username, projects_sort_by)
+project_repos = convert.repoDataToHTML(
+    project_data, git_username, projects_sort_by)
 if include_hackathon:
-    hackathon_repos = convert.repoDataToHTML(hackathon_data, git_username, projects_sort_by)
+    hackathon_repos = convert.repoDataToHTML(
+        hackathon_data, git_username, projects_sort_by)
 else:
     hackathon_repos = None
 
@@ -108,7 +110,8 @@ elif theme_selected == '2':
                              hackathon_repos, blogs, social_data, resume_link, allow_footer)
 
 
-newIndex = adder.addGitHubStats(newIndex, stats_choice, git_username, theme_selected, stats_customization)
+newIndex = adder.addGitHubStats(
+    newIndex, stats_choice, git_username, theme_selected, stats_customization)
 
 if 'index.html' in os.listdir(sys.argv[6]):
 
