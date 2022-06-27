@@ -47,7 +47,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, social_links
     type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     
-    <link href="https://www.kaustubhgupta.me/themescss/level2.css" rel="stylesheet" />
+    <link href="https://www.kaustubhgupta.github.io/themescss/level2.css" rel="stylesheet" />
     <style>
     {req_css}
     </style>
