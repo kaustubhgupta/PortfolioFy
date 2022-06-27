@@ -125,7 +125,7 @@ def genHTMLLevel2(user_data, project_repos, hackathon_repos, blogs, social_links
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
     <!-- Smooth Scrolling JS-->
-    <script src="https://www.kaustubhgupta.me/themescss/script.js"></script>
+    <script src="https://www.kaustubhgupta.github.io/themescss/script.js"></script>
     </body>
 
     </html>
